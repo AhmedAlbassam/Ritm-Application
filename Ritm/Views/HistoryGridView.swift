@@ -65,7 +65,7 @@ struct HistoryGridView: View {
         return .missed
     }
 
-    private func legendItem(color: Color, label: String, outlined: Color? = nil) -> some View {
+    private func legendItem(color: Color, label: LocalizedStringKey, outlined: Color? = nil) -> some View {
         HStack(spacing: 5) {
             RoundedRectangle(cornerRadius: 3, style: .continuous)
                 .fill(color)

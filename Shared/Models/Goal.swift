@@ -83,24 +83,7 @@ extension Goal {
     /// The last day of the challenge if every single day is achieved.
     var plannedEndDate: Date { startDate.addingDays(targetDays - 1) }
 
-    var longestStreak: Int {
-        let calendar = Calendar.current
-        var best = 0
-        var run = 0
-        var previous: Date?
-        for day in completedDates.sorted() {
-            if let previous,
-               let next = calendar.date(byAdding: .day, value: 1, to: previous),
-               calendar.isDate(next, inSameDayAs: day) {
-                run += 1
-            } else {
-                run = 1
-            }
-            best = max(best, run)
-            previous = day
-        }
-        return best
-    }
+    var longestStreak: Int { StreakMath.longest(in: completedDates) }
 
     var reminderMessage: String { Goal.reminderMessage(for: title) }
 
@@ -108,7 +91,7 @@ extension Goal {
         let cleaned = title
             .trimmingCharacters(in: .whitespacesAndNewlines)
             .trimmingCharacters(in: CharacterSet(charactersIn: ".!"))
-        return "Time for your daily goal: \(cleaned)!"
+        return String(localized: "Time for your daily goal: \(cleaned)!")
     }
 }
 
@@ -124,23 +107,8 @@ extension Goal {
         log(for: date)?.isCompleted ?? false
     }
 
-    /// Consecutive achieved days ending today. If today hasn't been checked off
-    /// yet, the streak counted through yesterday is still "alive".
     func streak(asOf date: Date) -> Int {
-        let calendar = Calendar.current
-        let done = completedDates
-        var day = calendar.startOfDay(for: date)
-        if !done.contains(day) {
-            guard let yesterday = calendar.date(byAdding: .day, value: -1, to: day) else { return 0 }
-            day = yesterday
-        }
-        var count = 0
-        while done.contains(day) {
-            count += 1
-            guard let previous = calendar.date(byAdding: .day, value: -1, to: day) else { break }
-            day = previous
-        }
-        return count
+        StreakMath.current(in: completedDates, asOf: date)
     }
 
     /// Days since the challenge started, counting the start day (0 before it starts).

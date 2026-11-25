@@ -34,7 +34,7 @@ struct DayCell: View {
         .disabled(status == .upcoming)
         .sensoryFeedback(.selection, trigger: status)
         .accessibilityLabel("Day \(dayNumber), \(date.formatted(date: .abbreviated, time: .omitted))")
-        .accessibilityValue(accessibilityStatus)
+        .accessibilityValue(Text(accessibilityStatus))
     }
 
     private var background: AnyShapeStyle {
@@ -57,10 +57,10 @@ struct DayCell: View {
 
     private var accessibilityStatus: String {
         switch status {
-        case .completed: "Achieved"
-        case .missed: "Missed"
-        case .pending: "Not yet checked in"
-        case .upcoming: "Upcoming"
+        case .completed: String(localized: "Achieved")
+        case .missed: String(localized: "Missed")
+        case .pending: String(localized: "Not yet checked in")
+        case .upcoming: String(localized: "Upcoming")
         }
     }
 }

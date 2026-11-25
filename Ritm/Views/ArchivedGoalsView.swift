@@ -58,9 +58,14 @@ struct ArchivedGoalsView: View {
                 Text(goal.title)
                     .font(.body.weight(.medium))
                     .lineLimit(1)
-                Text("\(goal.displayedCompletedDays) / \(goal.targetDays) days\(goal.isChallengeComplete ? " · Completed 🏆" : "")")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
+                HStack(spacing: 4) {
+                    Text("\(goal.displayedCompletedDays) / \(goal.targetDays) days")
+                    if goal.isChallengeComplete {
+                        Text("· Completed 🏆")
+                    }
+                }
+                .font(.caption)
+                .foregroundStyle(.secondary)
             }
         }
         .padding(.vertical, 2)
@@ -68,13 +73,13 @@ struct ArchivedGoalsView: View {
 
     private func restore(_ goal: Goal) {
         withAnimation { goal.isArchived = false }
-        try? modelContext.save()
+        AppEvents.goalsDidChange(in: modelContext)
         Task { await notifications.scheduleReminder(for: goal, requestPermissionIfNeeded: false) }
     }
 
     private func delete(_ goal: Goal) {
         notifications.cancelReminder(for: goal.id)
         withAnimation { modelContext.delete(goal) }
-        try? modelContext.save()
+        AppEvents.goalsDidChange(in: modelContext)
     }
 }

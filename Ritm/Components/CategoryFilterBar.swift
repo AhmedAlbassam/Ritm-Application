@@ -10,7 +10,7 @@ struct CategoryFilterBar: View {
         ScrollView(.horizontal) {
             HStack(spacing: 8) {
                 CategoryChip(
-                    title: "All",
+                    title: String(localized: "All"),
                     icon: "square.grid.2x2.fill",
                     color: .indigo,
                     count: totalCount,

@@ -3,7 +3,7 @@ import SwiftUI
 /// Small statistic card used on the goal detail screen.
 struct StatTile: View {
     let icon: String
-    let title: String
+    let title: LocalizedStringKey
     let value: String
     let color: Color
 
@@ -76,26 +76,5 @@ struct NotificationPreview: View {
         }
         .accessibilityElement(children: .combine)
         .accessibilityLabel("Notification preview: \(title). \(message)")
-    }
-}
-
-/// Floating celebratory banner.
-struct ToastBanner: View {
-    let message: String
-
-    var body: some View {
-        HStack(spacing: 10) {
-            Image(systemName: "trophy.fill")
-                .foregroundStyle(.orange)
-                .symbolEffect(.bounce, value: message)
-            Text(message)
-                .font(.subheadline.weight(.semibold))
-                .lineLimit(2)
-        }
-        .padding(.horizontal, 18)
-        .padding(.vertical, 14)
-        .background(.thickMaterial, in: Capsule())
-        .shadow(color: .black.opacity(0.15), radius: 16, y: 8)
-        .accessibilityAddTraits(.isStaticText)
     }
 }

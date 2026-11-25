@@ -1,0 +1,2528 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "%@ of “%@” complete": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اكتمل %1$@ من «%2$@»"
+          }
+        }
+      }
+    },
+    "%@ to go": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "متبقٍ %@"
+          }
+        }
+      }
+    },
+    "%@ · %lld days": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ · %2$lld يوم"
+          }
+        }
+      }
+    },
+    "%lld / %lld days": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld / %2$lld يوم"
+          }
+        }
+      }
+    },
+    "%lld days": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld day"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld days"
+                }
+              }
+            }
+          }
+        },
+        "ar": {
+          "variations": {
+            "plural": {
+              "zero": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld يوم"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "يوم واحد"
+                }
+              },
+              "two": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "يومان"
+                }
+              },
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld أيام"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld يومًا"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld يوم"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld fewer check-ins than the previous period. You've got this!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "انخفاض %lld في مرات الإنجاز عن الفترة السابقة. أنت قادر على ذلك!"
+          }
+        },
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld fewer check-in than the previous period. You've got this!"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld fewer check-ins than the previous period. You've got this!"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld more check-ins than the previous period. Keep it up!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "زيادة %lld في مرات الإنجاز عن الفترة السابقة. واصل التقدّم!"
+          }
+        },
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld more check-in than the previous period. Keep it up!"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld more check-ins than the previous period. Keep it up!"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld of %lld badges": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الأوسمة: %1$lld من %2$lld"
+          }
+        }
+      }
+    },
+    "%lld of %lld days": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld من %2$lld يوم"
+          }
+        }
+      }
+    },
+    "%lld of %lld days · 🔥 %@ streak": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld من %2$lld يوم · 🔥 سلسلة %3$@"
+          }
+        }
+      }
+    },
+    "%lld of %lld done": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld من %2$lld منجز"
+          }
+        }
+      }
+    },
+    "%lld of %lld goals achieved today": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الأهداف المنجزة اليوم: %1$lld من %2$lld"
+          }
+        }
+      }
+    },
+    "%lld perfect days in this period ✨": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الأيام المثالية في هذه الفترة: %lld ✨"
+          }
+        },
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld perfect day in this period ✨"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld perfect days in this period ✨"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld points": {
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld point"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld points"
+                }
+              }
+            }
+          }
+        },
+        "ar": {
+          "variations": {
+            "plural": {
+              "zero": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld نقطة"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "نقطة واحدة"
+                }
+              },
+              "two": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "نقطتان"
+                }
+              },
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld نقاط"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld نقطة"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld نقطة"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld points to the next level": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "المتبقي للمستوى التالي: %lld نقطة"
+          }
+        }
+      }
+    },
+    "%lld/%lld goals done": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld/%2$lld أهداف منجزة"
+          }
+        }
+      }
+    },
+    "About": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حول التطبيق"
+          }
+        }
+      }
+    },
+    "Achieve all of your goals in a single day (at least 2 goals).": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أنجز كل أهدافك في يوم واحد (هدفان على الأقل)."
+          }
+        }
+      }
+    },
+    "Achieved": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "منجز"
+          }
+        }
+      }
+    },
+    "Achieved Today": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أُنجز اليوم"
+          }
+        }
+      }
+    },
+    "Achieved today": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أُنجز اليوم"
+          }
+        }
+      }
+    },
+    "Achievement Unlocked!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حصلت على وسام جديد!"
+          }
+        }
+      }
+    },
+    "Achievements": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الأوسمة"
+          }
+        }
+      }
+    },
+    "Add": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إضافة"
+          }
+        }
+      }
+    },
+    "Add Goal": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إضافة هدف"
+          }
+        }
+      }
+    },
+    "Add a Goal": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أضف هدفًا"
+          }
+        }
+      }
+    },
+    "Add a goal to get started": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أضف هدفًا لتبدأ"
+          }
+        }
+      }
+    },
+    "Add your first goal in Ritm.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أضف هدفك الأول في رتم."
+          }
+        }
+      }
+    },
+    "All": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الكل"
+          }
+        }
+      }
+    },
+    "All challenges complete": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اكتملت كل التحديات"
+          }
+        }
+      }
+    },
+    "All done! 🎉": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أنجزت الكل! 🎉"
+          }
+        }
+      }
+    },
+    "All goals done today! 🎉": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أنجزت كل أهداف اليوم! 🎉"
+          }
+        }
+      }
+    },
+    "All goals done! 🎉": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أنجزت كل الأهداف! 🎉"
+          }
+        }
+      }
+    },
+    "Allowed": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مسموح"
+          }
+        }
+      }
+    },
+    "Almost there!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اقتربت كثيرًا!"
+          }
+        }
+      }
+    },
+    "App Language": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لغة التطبيق"
+          }
+        }
+      }
+    },
+    "Archive Goal": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أرشفة الهدف"
+          }
+        }
+      }
+    },
+    "Archived": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "المؤرشفة"
+          }
+        }
+      }
+    },
+    "Archived Goals": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الأهداف المؤرشفة"
+          }
+        }
+      }
+    },
+    "Balance": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "التوازن"
+          }
+        }
+      }
+    },
+    "Balanced Life": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حياة متوازنة"
+          }
+        }
+      }
+    },
+    "Best Active Streak": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أفضل سلسلة حالية"
+          }
+        }
+      }
+    },
+    "Best Days": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أفضل الأيام"
+          }
+        }
+      }
+    },
+    "Best Streak": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أفضل سلسلة"
+          }
+        }
+      }
+    },
+    "Best streak: %@": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أفضل سلسلة: %@"
+          }
+        }
+      }
+    },
+    "Bronze": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "برونزي"
+          }
+        }
+      }
+    },
+    "Build your daily rhythm": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ابنِ رتمك اليومي"
+          }
+        }
+      }
+    },
+    "Build your daily rhythm with Ritm": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ابنِ رتمك اليومي مع رتم"
+          }
+        }
+      }
+    },
+    "Cancel": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إلغاء"
+          }
+        }
+      }
+    },
+    "Century Legend": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أسطورة المئة"
+          }
+        }
+      }
+    },
+    "Challenge Champion": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بطل التحدي"
+          }
+        }
+      }
+    },
+    "Challenge complete — amazing work!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اكتمل التحدي — عمل مذهل!"
+          }
+        }
+      }
+    },
+    "Challenge complete!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اكتمل التحدي!"
+          }
+        }
+      }
+    },
+    "Challenges": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "التحديات"
+          }
+        }
+      }
+    },
+    "Check in 10 times.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سجّل إنجازك ١٠ مرات."
+          }
+        }
+      }
+    },
+    "Check in 100 times.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سجّل إنجازك ١٠٠ مرة."
+          }
+        }
+      }
+    },
+    "Check in 365 times. A whole year of wins!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سجّل إنجازك ٣٦٥ مرة. عام كامل من الإنجازات!"
+          }
+        }
+      }
+    },
+    "Check in 50 times.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سجّل إنجازك ٥٠ مرة."
+          }
+        }
+      }
+    },
+    "Check in on %@ to complete the challenge — as early as %@.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سجّل إنجازك لمدة %1$@ لإكمال التحدي — في أقرب وقت بتاريخ %2$@."
+          }
+        }
+      }
+    },
+    "Check in to start a streak": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سجّل إنجازك لتبدأ سلسلة"
+          }
+        }
+      }
+    },
+    "Check-in History": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سجل الإنجاز"
+          }
+        }
+      }
+    },
+    "Check-ins": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مرات الإنجاز"
+          }
+        }
+      }
+    },
+    "Choose English or العربية for Ritm in the iOS Settings app. In Arabic, the whole app switches to a right-to-left layout.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اختر English أو العربية لتطبيق رتم من تطبيق الإعدادات في iOS. في العربية، يتحول التطبيق بالكامل إلى الاتجاه من اليمين إلى اليسار."
+          }
+        }
+      }
+    },
+    "Committed": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ملتزم"
+          }
+        }
+      }
+    },
+    "Complete 3 challenges.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أكمل ٣ تحديات."
+          }
+        }
+      }
+    },
+    "Complete 5 challenges.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أكمل ٥ تحديات."
+          }
+        }
+      }
+    },
+    "Complete your first challenge.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أكمل تحديك الأول."
+          }
+        }
+      }
+    },
+    "Complete your very first check-in.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سجّل إنجازك الأول."
+          }
+        }
+      }
+    },
+    "Completed Challenges": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تحديات مكتملة"
+          }
+        }
+      }
+    },
+    "Completion Rate": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نسبة الإكمال"
+          }
+        }
+      }
+    },
+    "Connected": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "متصلة"
+          }
+        }
+      }
+    },
+    "Consistency": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الاستمرارية"
+          }
+        }
+      }
+    },
+    "Consistency heatmap": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "خريطة الاستمرارية"
+          }
+        }
+      }
+    },
+    "Continue": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "متابعة"
+          }
+        }
+      }
+    },
+    "Create a Goal": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أنشئ هدفًا"
+          }
+        }
+      }
+    },
+    "Create a goal and check in for a few days to see your trends here.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أنشئ هدفًا وسجّل إنجازك لبضعة أيام لترى تقدّمك هنا."
+          }
+        }
+      }
+    },
+    "Create goals in 3 different life areas.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أنشئ أهدافًا في ٣ مجالات مختلفة من حياتك."
+          }
+        }
+      }
+    },
+    "Create goals in every life area.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أنشئ أهدافًا في كل مجالات حياتك."
+          }
+        }
+      }
+    },
+    "Current Streak": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "السلسلة الحالية"
+          }
+        }
+      }
+    },
+    "Current streak: %@": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "السلسلة الحالية: %@"
+          }
+        }
+      }
+    },
+    "Custom": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مخصص"
+          }
+        }
+      }
+    },
+    "Daily Reminder": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تذكير يومي"
+          }
+        }
+      }
+    },
+    "Daily reminder": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "التذكير اليومي"
+          }
+        }
+      }
+    },
+    "Date": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "التاريخ"
+          }
+        }
+      }
+    },
+    "Day %lld, %@": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اليوم %1$lld، %2$@"
+          }
+        }
+      }
+    },
+    "Days Achieved": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أيام الإنجاز"
+          }
+        }
+      }
+    },
+    "Deep work for 1 hour": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "عمل مركّز لمدة ساعة"
+          }
+        }
+      }
+    },
+    "Delete": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حذف"
+          }
+        }
+      }
+    },
+    "Delete Goal": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حذف الهدف"
+          }
+        }
+      }
+    },
+    "Delete this goal?": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حذف هذا الهدف؟"
+          }
+        }
+      }
+    },
+    "Done": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تم"
+          }
+        }
+      }
+    },
+    "Edit Goal": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تعديل الهدف"
+          }
+        }
+      }
+    },
+    "Explorer": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "المستكشف"
+          }
+        }
+      }
+    },
+    "Finance": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "المالية"
+          }
+        }
+      }
+    },
+    "Fine-tune": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ضبط دقيق"
+          }
+        }
+      }
+    },
+    "First Step": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الخطوة الأولى"
+          }
+        }
+      }
+    },
+    "Forgot to check in? Tap any past day to update it.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نسيت التسجيل؟ اضغط على أي يوم سابق لتحديثه."
+          }
+        }
+      }
+    },
+    "Getting Started": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "انطلاقة موفّقة"
+          }
+        }
+      }
+    },
+    "Goal": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الهدف"
+          }
+        }
+      }
+    },
+    "Goal Crusher": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "محطّم الأهداف"
+          }
+        }
+      }
+    },
+    "Goal ID": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "معرّف الهدف"
+          }
+        }
+      }
+    },
+    "Goal Removed": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تم حذف الهدف"
+          }
+        }
+      }
+    },
+    "Goal Success Rate": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نسبة نجاح الأهداف"
+          }
+        }
+      }
+    },
+    "Goal options": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "خيارات الهدف"
+          }
+        }
+      }
+    },
+    "Goals you archive appear here, with their full history kept safe.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تظهر هنا الأهداف التي تؤرشفها، مع الاحتفاظ بسجلها كاملًا."
+          }
+        }
+      }
+    },
+    "Gold": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ذهبي"
+          }
+        }
+      }
+    },
+    "Great momentum. Keep it going!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "زخم رائع. واصل!"
+          }
+        }
+      }
+    },
+    "Great start!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بداية رائعة!"
+          }
+        }
+      }
+    },
+    "Habit Formed": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تكوّنت العادة"
+          }
+        }
+      }
+    },
+    "Habit time 🔁": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "وقت العادة 🔁"
+          }
+        }
+      }
+    },
+    "Habits": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "العادات"
+          }
+        }
+      }
+    },
+    "Halfway there!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "في منتصف الطريق!"
+          }
+        }
+      }
+    },
+    "Have 7 perfect days in a row.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حقّق ٧ أيام مثالية متتالية."
+          }
+        }
+      }
+    },
+    "Health": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الصحة"
+          }
+        }
+      }
+    },
+    "Health check-in 💪": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "وقت صحتك 💪"
+          }
+        }
+      }
+    },
+    "Hundred Club": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نادي المئة"
+          }
+        }
+      }
+    },
+    "I just unlocked “%@” on Ritm! 🎉": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حصلت للتو على وسام «%@» في رتم! 🎉"
+          }
+        }
+      }
+    },
+    "I'm working on “%@” with Ritm: %@": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أعمل على «%1$@» مع رتم: %2$@"
+          }
+        }
+      }
+    },
+    "Insights": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الإحصاءات"
+          }
+        }
+      }
+    },
+    "Keep learning 📚": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "واصل التعلّم 📚"
+          }
+        }
+      }
+    },
+    "Keep today's goals in view on your Lock Screen.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أبقِ أهداف اليوم أمام عينيك على شاشة القفل."
+          }
+        }
+      }
+    },
+    "Language": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اللغة"
+          }
+        }
+      }
+    },
+    "Last 12 weeks": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آخر ١٢ أسبوعًا"
+          }
+        }
+      }
+    },
+    "Last 17 weeks": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آخر ١٧ أسبوعًا"
+          }
+        }
+      }
+    },
+    "Learning": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "التعلّم"
+          }
+        }
+      }
+    },
+    "Legendary": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أسطوري"
+          }
+        }
+      }
+    },
+    "Less": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أقل"
+          }
+        }
+      }
+    },
+    "Let's make today count. 💪": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لنجعل اليوم مميزًا 💪"
+          }
+        }
+      }
+    },
+    "Level": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "المستوى"
+          }
+        }
+      }
+    },
+    "Life Areas": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مجالات الحياة"
+          }
+        }
+      }
+    },
+    "Life Category": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مجال الحياة"
+          }
+        }
+      }
+    },
+    "Locked": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مقفل"
+          }
+        }
+      }
+    },
+    "Make it specific and doable every day.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اجعله محددًا وقابلًا للتنفيذ كل يوم."
+          }
+        }
+      }
+    },
+    "Mark Today as Achieved": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سجّل إنجاز اليوم"
+          }
+        }
+      }
+    },
+    "Mark as Achieved ✅": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تم الإنجاز ✅"
+          }
+        }
+      }
+    },
+    "Mark as achieved today": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سجّل الإنجاز لليوم"
+          }
+        }
+      }
+    },
+    "Marks a goal as achieved, or not achieved, for today.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يحدد الهدف كمنجز أو غير منجز لليوم."
+          }
+        }
+      }
+    },
+    "Menu": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "القائمة"
+          }
+        }
+      }
+    },
+    "Milestone Reached!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "وصلت إلى محطة جديدة!"
+          }
+        }
+      }
+    },
+    "Missed": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فائت"
+          }
+        }
+      }
+    },
+    "Money moment 💰": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لحظة مالية 💰"
+          }
+        }
+      }
+    },
+    "Month": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "شهر"
+          }
+        }
+      }
+    },
+    "Monthly Master": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سيّد الشهر"
+          }
+        }
+      }
+    },
+    "More": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أكثر"
+          }
+        }
+      }
+    },
+    "My Progress": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تقدّمي"
+          }
+        }
+      }
+    },
+    "New Goal": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "هدف جديد"
+          }
+        }
+      }
+    },
+    "Nice start. One step at a time.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بداية جميلة. خطوة بخطوة."
+          }
+        }
+      }
+    },
+    "No Archived Goals": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لا توجد أهداف مؤرشفة"
+          }
+        }
+      }
+    },
+    "No Insights Yet": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لا توجد إحصاءات بعد"
+          }
+        }
+      }
+    },
+    "No goals in %@ yet": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لا توجد أهداف في %@ بعد"
+          }
+        }
+      }
+    },
+    "No takeout spending": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بدون إنفاق على الطلبات الخارجية"
+          }
+        }
+      }
+    },
+    "Not Now": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ليس الآن"
+          }
+        }
+      }
+    },
+    "Not connected": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "غير متصلة"
+          }
+        }
+      }
+    },
+    "Not set up": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "غير مُعدّ"
+          }
+        }
+      }
+    },
+    "Not yet checked in": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لم يُسجَّل بعد"
+          }
+        }
+      }
+    },
+    "Notification preview: %@. %@": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "معاينة الإشعار: %1$@. %2$@"
+          }
+        }
+      }
+    },
+    "Notifications": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الإشعارات"
+          }
+        }
+      }
+    },
+    "Notifications Are Off": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الإشعارات متوقفة"
+          }
+        }
+      }
+    },
+    "Notifications are disabled. Tap to enable them in Settings.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الإشعارات متوقفة. اضغط لتفعيلها من الإعدادات."
+          }
+        }
+      }
+    },
+    "Off": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "متوقف"
+          }
+        }
+      }
+    },
+    "One Week Strong": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أسبوع من القوة"
+          }
+        }
+      }
+    },
+    "Open Ritm to finish setting up widgets.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "افتح رتم لإكمال إعداد الأدوات."
+          }
+        }
+      }
+    },
+    "Open Settings": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فتح الإعدادات"
+          }
+        }
+      }
+    },
+    "Or start with an idea": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أو ابدأ بفكرة"
+          }
+        }
+      }
+    },
+    "PREVIEW": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "معاينة"
+          }
+        }
+      }
+    },
+    "Perfect Day": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يوم مثالي"
+          }
+        }
+      }
+    },
+    "Perfect Days": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الأيام المثالية"
+          }
+        }
+      }
+    },
+    "Perfect Week": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أسبوع مثالي"
+          }
+        }
+      }
+    },
+    "Perfect day — every goal checked off! 🎉": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يوم مثالي — أنجزت كل أهدافك! 🎉"
+          }
+        }
+      }
+    },
+    "Personal": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الشخصية"
+          }
+        }
+      }
+    },
+    "Personal growth ✨": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نموّك الشخصي ✨"
+          }
+        }
+      }
+    },
+    "Planned finish": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الانتهاء المتوقع"
+          }
+        }
+      }
+    },
+    "Range": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الفترة"
+          }
+        }
+      }
+    },
+    "Reach a 100-day streak. Truly legendary!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حقّق سلسلة من ١٠٠ يوم متتالٍ. إنجاز أسطوري!"
+          }
+        }
+      }
+    },
+    "Reach a 14-day streak on any goal.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حقّق سلسلة من ١٤ يومًا متتاليًا في أي هدف."
+          }
+        }
+      }
+    },
+    "Reach a 21-day streak. That's how habits are made!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حقّق سلسلة من ٢١ يومًا متتاليًا. هكذا تُبنى العادات!"
+          }
+        }
+      }
+    },
+    "Reach a 3-day streak on any goal.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حقّق سلسلة من ٣ أيام متتالية في أي هدف."
+          }
+        }
+      }
+    },
+    "Reach a 30-day streak on any goal.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حقّق سلسلة من ٣٠ يومًا متتاليًا في أي هدف."
+          }
+        }
+      }
+    },
+    "Reach a 50-day streak on any goal.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حقّق سلسلة من ٥٠ يومًا متتاليًا في أي هدف."
+          }
+        }
+      }
+    },
+    "Reach a 7-day streak on any goal.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حقّق سلسلة من ٧ أيام متتالية في أي هدف."
+          }
+        }
+      }
+    },
+    "Read 10 pages": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "قراءة ١٠ صفحات"
+          }
+        }
+      }
+    },
+    "Recent Milestones": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أحدث المحطات"
+          }
+        }
+      }
+    },
+    "Remind me at": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ذكّرني الساعة"
+          }
+        }
+      }
+    },
+    "Reminder": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "التذكير"
+          }
+        }
+      }
+    },
+    "Reminder at %@": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تذكير الساعة %@"
+          }
+        }
+      }
+    },
+    "Reminders": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "التذكيرات"
+          }
+        }
+      }
+    },
+    "Restore": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "استعادة"
+          }
+        }
+      }
+    },
+    "Restore Goal": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "استعادة الهدف"
+          }
+        }
+      }
+    },
+    "Ritm": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "رتم"
+          }
+        }
+      }
+    },
+    "Ritm Progress": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تقدّم رتم"
+          }
+        }
+      }
+    },
+    "Save": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حفظ"
+          }
+        }
+      }
+    },
+    "See today's progress and check off goals right from your Home Screen.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تابع تقدّم اليوم وسجّل إنجاز أهدافك مباشرة من الشاشة الرئيسية."
+          }
+        }
+      }
+    },
+    "Set Your First Goal": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حدّد هدفك الأول"
+          }
+        }
+      }
+    },
+    "Settings": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الإعدادات"
+          }
+        }
+      }
+    },
+    "Share Progress": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مشاركة التقدّم"
+          }
+        }
+      }
+    },
+    "Share with Friends": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "شارك مع أصدقائك"
+          }
+        }
+      }
+    },
+    "Silver": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فضي"
+          }
+        }
+      }
+    },
+    "Small daily wins add up. Choose a goal, pick how many days, and get a friendly nudge every day.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الإنجازات اليومية الصغيرة تصنع الفرق. اختر هدفًا وحدّد عدد الأيام، وسنذكّرك بلطف كل يوم."
+          }
+        }
+      }
+    },
+    "Started": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تاريخ البدء"
+          }
+        }
+      }
+    },
+    "Streaks": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "السلاسل"
+          }
+        }
+      }
+    },
+    "Success Rate": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نسبة النجاح"
+          }
+        }
+      }
+    },
+    "Target Duration": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مدة التحدي"
+          }
+        }
+      }
+    },
+    "This permanently removes “%@” and its entire check-in history.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سيُحذف «%@» نهائيًا مع سجل إنجازاته بالكامل."
+          }
+        }
+      }
+    },
+    "Time for your daily goal: %@!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حان وقت هدفك اليومي: %@!"
+          }
+        }
+      }
+    },
+    "Time to set a new goal! 🚀": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حان وقت هدف جديد! 🚀"
+          }
+        }
+      }
+    },
+    "To get your daily reminder, allow notifications for Ritm in Settings.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لتصلك رسالة التذكير اليومية، اسمح بإشعارات رتم من الإعدادات."
+          }
+        }
+      }
+    },
+    "Today": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اليوم"
+          }
+        }
+      }
+    },
+    "Today's Goals": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أهداف اليوم"
+          }
+        }
+      }
+    },
+    "Today's Progress": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تقدّم اليوم"
+          }
+        }
+      }
+    },
+    "Toggle Goal": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تبديل حالة الهدف"
+          }
+        }
+      }
+    },
+    "Triple Crown": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "التاج الثلاثي"
+          }
+        }
+      }
+    },
+    "Turn On in Settings": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "التفعيل من الإعدادات"
+          }
+        }
+      }
+    },
+    "Two Weeks Steady": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أسبوعان من الثبات"
+          }
+        }
+      }
+    },
+    "Unlocked": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مفتوح"
+          }
+        }
+      }
+    },
+    "Unlocked on %@": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حصلت عليه في %@"
+          }
+        }
+      }
+    },
+    "Unstoppable": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لا يمكن إيقافك"
+          }
+        }
+      }
+    },
+    "Upcoming": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "قادم"
+          }
+        }
+      }
+    },
+    "Version": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الإصدار"
+          }
+        }
+      }
+    },
+    "Walk for 30 min daily": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "المشي ٣٠ دقيقة يوميًا"
+          }
+        }
+      }
+    },
+    "Warming Up": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بداية الحماس"
+          }
+        }
+      }
+    },
+    "Week": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أسبوع"
+          }
+        }
+      }
+    },
+    "Widgets": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الأدوات"
+          }
+        }
+      }
+    },
+    "Widgets need the App Group capability. See the README for the one-time setup in Xcode.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تحتاج الأدوات إلى ميزة App Group. راجع ملف README لإعدادها مرة واحدة في Xcode."
+          }
+        }
+      }
+    },
+    "Work": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "العمل"
+          }
+        }
+      }
+    },
+    "Work focus 🎯": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تركيز العمل 🎯"
+          }
+        }
+      }
+    },
+    "Year": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سنة"
+          }
+        }
+      }
+    },
+    "Year of Wins": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "عام من الإنجازات"
+          }
+        }
+      }
+    },
+    "You'll get a gentle nudge every day at %@.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ستصلك رسالة تذكير لطيفة كل يوم الساعة %@."
+          }
+        }
+      }
+    },
+    "You're most consistent on %@.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أنت أكثر التزامًا يوم %@."
+          }
+        }
+      }
+    },
+    "You've completed %lld of %lld days of “%@”.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أنجزت %1$lld من %2$lld يوم في «%3$@»."
+          }
+        }
+      }
+    },
+    "Your best active streak is %@. Don't break the chain!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أفضل سلسلة لديك الآن %@. لا تقطعها!"
+          }
+        }
+      }
+    },
+    "days": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يوم"
+          }
+        }
+      }
+    },
+    "e.g., %@": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مثال: %@"
+          }
+        }
+      }
+    },
+    "goals done today": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أهداف منجزة اليوم"
+          }
+        }
+      }
+    },
+    "· Completed 🏆": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "· مكتمل 🏆"
+          }
+        }
+      }
+    },
+    "“%@” is your strongest habit right now.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "«%@» هي أقوى عاداتك حاليًا."
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

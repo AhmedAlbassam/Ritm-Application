@@ -10,16 +10,16 @@ struct DailySummaryCard: View {
     }
 
     private var headline: String {
-        guard total > 0 else { return "All challenges complete" }
-        return "\(achieved) of \(total) \(total == 1 ? "goal" : "goals") achieved today"
+        guard total > 0 else { return String(localized: "All challenges complete") }
+        return String(localized: "\(achieved) of \(total) goals achieved today")
     }
 
     private var message: String {
-        if total == 0 { return "Time to set a new goal! 🚀" }
-        if progress >= 1 { return "Perfect day — every goal checked off! 🎉" }
-        if progress >= 0.5 { return "Great momentum. Keep it going!" }
-        if progress > 0 { return "Nice start. One step at a time." }
-        return "Let's make today count. 💪"
+        if total == 0 { return String(localized: "Time to set a new goal! 🚀") }
+        if progress >= 1 { return String(localized: "Perfect day — every goal checked off! 🎉") }
+        if progress >= 0.5 { return String(localized: "Great momentum. Keep it going!") }
+        if progress > 0 { return String(localized: "Nice start. One step at a time.") }
+        return String(localized: "Let's make today count. 💪")
     }
 
     var body: some View {
@@ -31,7 +31,7 @@ struct DailySummaryCard: View {
                     colors: [.white.opacity(0.7), .white],
                     trackColor: .white.opacity(0.2)
                 )
-                Text("\(Int((progress * 100).rounded()))%")
+                Text(progress, format: .percent.precision(.fractionLength(0)))
                     .font(.system(.headline, design: .rounded).weight(.bold))
                     .contentTransition(.numericText())
             }

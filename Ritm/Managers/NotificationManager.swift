@@ -47,7 +47,7 @@ final class NotificationManager {
 
         let markAchieved = UNNotificationAction(
             identifier: ReminderConstants.markAchievedAction,
-            title: "Mark as Achieved ✅",
+            title: String(localized: "Mark as Achieved ✅"),
             options: []
         )
         let category = UNNotificationCategory(
@@ -174,7 +174,7 @@ final class NotificationManager {
         guard let goal = try? context.fetch(descriptor).first else { return }
 
         goal.setAchieved(true, on: .now)
-        try? context.save()
+        AppEvents.goalsDidChange(in: context)
 
         if goal.isChallengeComplete {
             cancelReminder(for: goal.id)

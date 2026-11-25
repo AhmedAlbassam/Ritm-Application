@@ -1,26 +1,26 @@
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 @main
 struct RitmApp: App {
-    private let modelContainer: ModelContainer
+    @State private var store: DataStore
 
     init() {
-        do {
-            modelContainer = try ModelContainer(for: Goal.self, DailyLog.self)
-        } catch {
-            fatalError("Failed to create the SwiftData container: \(error)")
-        }
+        let store = DataStore()
+        _store = State(initialValue: store)
         // Set the notification delegate as early as possible so taps on and
         // actions from reminders are handled even on a cold launch.
-        NotificationManager.shared.configure(with: modelContainer)
+        NotificationManager.shared.configure(with: store.container)
     }
 
     var body: some Scene {
         WindowGroup {
-            TodayView()
+            RootView()
+                .id(store.generation)
+                .modelContainer(store.container)
+                .environment(store)
                 .environment(NotificationManager.shared)
+                .environment(CelebrationCenter.shared)
         }
-        .modelContainer(modelContainer)
     }
 }

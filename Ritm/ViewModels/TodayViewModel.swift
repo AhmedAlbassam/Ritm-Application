@@ -1,5 +1,6 @@
-import SwiftUI
 import Observation
+import SwiftData
+import SwiftUI
 
 /// Presentation state and actions for the Today screen.
 /// Goals themselves come from `@Query` in the view; this model filters and acts on them.
@@ -10,7 +11,8 @@ final class TodayViewModel {
     /// Normalized "today". Refreshed when the app becomes active or the day rolls over.
     private(set) var today: Date = Date.now.startOfDay
     var addGoalRequest: AddGoalRequest?
-    var celebrationMessage: String?
+    var isShowingSettings = false
+    var isShowingArchived = false
 
     func refreshToday() {
         let now = Date.now.startOfDay
@@ -48,7 +50,7 @@ final class TodayViewModel {
 
     // MARK: Actions
 
-    func toggle(_ goal: Goal) {
+    func toggle(_ goal: Goal, in context: ModelContext) {
         refreshToday()
         let wasComplete = goal.isChallengeComplete
 
@@ -56,16 +58,12 @@ final class TodayViewModel {
             goal.toggleAchieved(on: today)
         }
 
-        let isComplete = goal.isChallengeComplete
-        guard wasComplete != isComplete else { return }
+        // Saves, refreshes widgets, and queues any milestone / achievement celebration.
+        AppEvents.goalsDidChange(in: context)
 
         // Stop reminders once a challenge is finished; resume if it's undone.
-        Task { await NotificationManager.shared.scheduleReminder(for: goal, requestPermissionIfNeeded: false) }
-
-        if isComplete {
-            withAnimation(.spring) {
-                celebrationMessage = "Challenge complete: \(goal.title) 🎉"
-            }
+        if wasComplete != goal.isChallengeComplete {
+            Task { await NotificationManager.shared.scheduleReminder(for: goal, requestPermissionIfNeeded: false) }
         }
     }
 }

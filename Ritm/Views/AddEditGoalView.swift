@@ -26,16 +26,18 @@ struct AddEditGoalView: View {
                 durationSection
                 reminderSection
             }
-            .navigationTitle(form.isEditing ? "Edit Goal" : "New Goal")
+            .navigationTitle(form.isEditing ? Text("Edit Goal") : Text("New Goal"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Cancel") { dismiss() }
                 }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button(form.isEditing ? "Save" : "Add") { save() }
-                        .fontWeight(.semibold)
-                        .disabled(!form.isValid)
+                    Button { save() } label: {
+                        form.isEditing ? Text("Save") : Text("Add")
+                    }
+                    .fontWeight(.semibold)
+                    .disabled(!form.isValid)
                 }
             }
             .task {
@@ -104,7 +106,7 @@ struct AddEditGoalView: View {
 
             Stepper(value: $form.targetDays, in: GoalFormModel.dayRange) {
                 HStack {
-                    Text(form.isCustomDuration ? "Custom" : "Fine-tune")
+                    form.isCustomDuration ? Text("Custom") : Text("Fine-tune")
                     Spacer()
                     Text(form.targetDays.daysLabel)
                         .monospacedDigit()
@@ -171,7 +173,7 @@ struct AddEditGoalView: View {
             modelContext.insert(newGoal)
             savedGoal = newGoal
         }
-        try? modelContext.save()
+        AppEvents.goalsDidChange(in: modelContext)
 
         Task { await notifications.scheduleReminder(for: savedGoal) }
         dismiss()

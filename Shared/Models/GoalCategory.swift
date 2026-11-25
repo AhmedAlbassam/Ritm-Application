@@ -11,7 +11,16 @@ enum GoalCategory: String, CaseIterable, Codable, Identifiable {
 
     var id: String { rawValue }
 
-    var title: String { rawValue.capitalized }
+    var title: String {
+        switch self {
+        case .health: String(localized: "Health")
+        case .work: String(localized: "Work")
+        case .habits: String(localized: "Habits")
+        case .learning: String(localized: "Learning")
+        case .finance: String(localized: "Finance")
+        case .personal: String(localized: "Personal")
+        }
+    }
 
     var icon: String {
         switch self {
@@ -38,12 +47,12 @@ enum GoalCategory: String, CaseIterable, Codable, Identifiable {
     /// Short, upbeat title used for the reminder notification.
     var reminderTitle: String {
         switch self {
-        case .health: "Health check-in 💪"
-        case .work: "Work focus 🎯"
-        case .habits: "Habit time 🔁"
-        case .learning: "Keep learning 📚"
-        case .finance: "Money moment 💰"
-        case .personal: "Personal growth ✨"
+        case .health: String(localized: "Health check-in 💪")
+        case .work: String(localized: "Work focus 🎯")
+        case .habits: String(localized: "Habit time 🔁")
+        case .learning: String(localized: "Keep learning 📚")
+        case .finance: String(localized: "Money moment 💰")
+        case .personal: String(localized: "Personal growth ✨")
         }
     }
 }

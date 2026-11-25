@@ -5,6 +5,7 @@ import SwiftUI
 /// Main screen: today's summary, category filter, and the list of active goals.
 struct TodayView: View {
     @Environment(\.scenePhase) private var scenePhase
+    @Environment(\.modelContext) private var modelContext
 
     @Query(filter: #Predicate<Goal> { $0.isArchived == false }, sort: \Goal.createdAt, order: .forward)
     private var goals: [Goal]
@@ -25,10 +26,15 @@ struct TodayView: View {
             .navigationDestination(for: Goal.self) { goal in
                 GoalDetailView(goal: goal)
             }
+            .navigationDestination(isPresented: $viewModel.isShowingArchived) {
+                ArchivedGoalsView()
+            }
             .sheet(item: $viewModel.addGoalRequest) { request in
                 AddEditGoalView(template: request.template)
             }
-            .overlay(alignment: .bottom) { celebrationToast }
+            .sheet(isPresented: $viewModel.isShowingSettings) {
+                SettingsView()
+            }
         }
         .onChange(of: scenePhase) { _, phase in
             if phase == .active { viewModel.refreshToday() }
@@ -85,7 +91,7 @@ struct TodayView: View {
             LazyVStack(spacing: 12) {
                 ForEach(active) { goal in
                     GoalCardView(goal: goal, today: viewModel.today) {
-                        viewModel.toggle(goal)
+                        viewModel.toggle(goal, in: modelContext)
                     }
                     .transition(.asymmetric(insertion: .scale(scale: 0.95).combined(with: .opacity), removal: .opacity))
                 }
@@ -101,7 +107,7 @@ struct TodayView: View {
                     .padding(.top, 8)
                 ForEach(completed) { goal in
                     GoalCardView(goal: goal, today: viewModel.today) {
-                        viewModel.toggle(goal)
+                        viewModel.toggle(goal, in: modelContext)
                     }
                     .opacity(0.85)
                 }
@@ -114,7 +120,7 @@ struct TodayView: View {
             Image(systemName: viewModel.selectedCategory?.icon ?? "tray")
                 .font(.largeTitle)
                 .foregroundStyle(viewModel.selectedCategory?.color ?? .secondary)
-            Text("No \(viewModel.selectedCategory?.title ?? "") goals yet")
+            Text("No goals in \(viewModel.selectedCategory?.title ?? "") yet")
                 .font(.headline)
             Button("Add a Goal") {
                 viewModel.addGoalRequest = AddGoalRequest()
@@ -126,34 +132,27 @@ struct TodayView: View {
         .padding(.vertical, 40)
     }
 
-    @ViewBuilder
-    private var celebrationToast: some View {
-        if let message = viewModel.celebrationMessage {
-            ToastBanner(message: message)
-                .padding(.horizontal, 20)
-                .padding(.bottom, 12)
-                .transition(.move(edge: .bottom).combined(with: .opacity))
-                .task(id: message) {
-                    try? await Task.sleep(for: .seconds(3))
-                    withAnimation(.spring) { viewModel.celebrationMessage = nil }
-                }
-                .onTapGesture {
-                    withAnimation(.spring) { viewModel.celebrationMessage = nil }
-                }
-        }
-    }
-
     // MARK: Toolbar
 
     @ToolbarContentBuilder
     private var toolbarContent: some ToolbarContent {
         ToolbarItem(placement: .topBarLeading) {
-            NavigationLink {
-                ArchivedGoalsView()
+            Menu {
+                Button {
+                    viewModel.isShowingArchived = true
+                } label: {
+                    Label("Archived Goals", systemImage: "archivebox")
+                }
+                Button {
+                    viewModel.isShowingSettings = true
+                } label: {
+                    Label("Settings", systemImage: "gearshape")
+                }
             } label: {
-                Image(systemName: "archivebox")
+                Image(systemName: "line.3.horizontal.circle")
+                    .font(.title3)
             }
-            .accessibilityLabel("Archived Goals")
+            .accessibilityLabel(Text("Menu"))
         }
         ToolbarItem(placement: .topBarTrailing) {
             Button {
@@ -163,7 +162,7 @@ struct TodayView: View {
                     .font(.title2)
                     .symbolRenderingMode(.hierarchical)
             }
-            .accessibilityLabel("Add Goal")
+            .accessibilityLabel(Text("Add Goal"))
         }
     }
 }
@@ -177,7 +176,7 @@ struct TodayView: View {
 
 #Preview("Empty") {
     TodayView()
-        .modelContainer(for: [Goal.self, DailyLog.self], inMemory: true)
+        .modelContainer(try! SharedStore.makeContainer(inMemory: true))
         .environment(NotificationManager.shared)
 }
 #endif

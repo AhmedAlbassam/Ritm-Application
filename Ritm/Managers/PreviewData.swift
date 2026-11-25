@@ -6,9 +6,8 @@ import SwiftData
 @MainActor
 enum PreviewData {
     static let container: ModelContainer = {
-        let configuration = ModelConfiguration(isStoredInMemoryOnly: true)
         do {
-            let container = try ModelContainer(for: Goal.self, DailyLog.self, configurations: configuration)
+            let container = try SharedStore.makeContainer(inMemory: true)
             populate(container.mainContext)
             return container
         } catch {
@@ -26,10 +25,10 @@ enum PreviewData {
 
         let samples: [(String, GoalCategory, Int, Int, [Int], Bool)] = [
             // title, category, target, started N days ago, missed day offsets, reminder
-            ("Walk for 30 min daily", .health, 30, 13, [4, 9], true),
-            ("Read 10 pages", .learning, 21, 6, [2], false),
-            ("Deep work for 1 hour", .work, 14, 3, [], true),
-            ("Track every expense", .finance, 7, 7, [], false),
+            (String(localized: "Walk for 30 min daily"), .health, 30, 13, [4, 9], true),
+            (String(localized: "Read 10 pages"), .learning, 21, 6, [2], false),
+            (String(localized: "Deep work for 1 hour"), .work, 14, 3, [], true),
+            (String(localized: "No takeout spending"), .finance, 7, 7, [], false),
         ]
 
         for (title, category, target, daysAgo, missed, reminder) in samples {

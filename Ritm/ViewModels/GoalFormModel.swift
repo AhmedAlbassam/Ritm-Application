@@ -6,7 +6,7 @@ import Observation
 final class GoalFormModel {
     static let durationPresets = [7, 14, 21, 30, 60, 90]
     static let dayRange = 1...365
-    static let titlePlaceholder = "Walk for 30 min daily"
+    static var titlePlaceholder: String { String(localized: "Walk for 30 min daily") }
 
     var title: String
     var category: GoalCategory

@@ -8,10 +8,10 @@ struct GoalTemplate: Identifiable, Hashable {
     let targetDays: Int
 
     static let suggestions: [GoalTemplate] = [
-        GoalTemplate(title: "Walk for 30 min daily", category: .health, targetDays: 30),
-        GoalTemplate(title: "Read 10 pages", category: .learning, targetDays: 21),
-        GoalTemplate(title: "Deep work for 1 hour", category: .work, targetDays: 14),
-        GoalTemplate(title: "No takeout spending", category: .finance, targetDays: 30),
+        GoalTemplate(title: String(localized: "Walk for 30 min daily"), category: .health, targetDays: 30),
+        GoalTemplate(title: String(localized: "Read 10 pages"), category: .learning, targetDays: 21),
+        GoalTemplate(title: String(localized: "Deep work for 1 hour"), category: .work, targetDays: 14),
+        GoalTemplate(title: String(localized: "No takeout spending"), category: .finance, targetDays: 30),
     ]
 }
 

@@ -28,7 +28,7 @@ struct CheckInButton: View {
         .sensoryFeedback(trigger: isCompleted) { _, newValue in
             newValue ? .success : .impact(weight: .light)
         }
-        .accessibilityLabel(isCompleted ? "Achieved today" : "Mark as achieved today")
+        .accessibilityLabel(isCompleted ? Text("Achieved today") : Text("Mark as achieved today"))
         .accessibilityAddTraits(isCompleted ? .isSelected : [])
     }
 }

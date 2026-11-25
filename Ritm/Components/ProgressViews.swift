@@ -31,7 +31,7 @@ struct ProgressRing: View {
         }
         .animation(.spring(response: 0.8, dampingFraction: 0.8), value: clamped)
         .accessibilityElement()
-        .accessibilityValue("\(Int((clamped * 100).rounded())) percent")
+        .accessibilityValue(Text(clamped, format: .percent.precision(.fractionLength(0))))
     }
 }
 

@@ -80,7 +80,7 @@ struct GoalDetailView: View {
             ZStack {
                 ProgressRing(progress: goal.progressRatio, lineWidth: 16, colors: [color.opacity(0.55), color])
                 VStack(spacing: 2) {
-                    Text("\(Int((goal.progressRatio * 100).rounded()))%")
+                    Text(goal.progressRatio, format: .percent.precision(.fractionLength(0)))
                         .font(.system(size: 36, weight: .bold, design: .rounded))
                         .contentTransition(.numericText())
                     Text("\(goal.displayedCompletedDays) of \(goal.targetDays) days")
@@ -126,7 +126,7 @@ struct GoalDetailView: View {
                 Image(systemName: achieved ? "checkmark.circle.fill" : "circle")
                     .font(.title2)
                     .symbolEffect(.bounce, value: achieved)
-                Text(achieved ? "Achieved Today" : "Mark Today as Achieved")
+                (achieved ? Text("Achieved Today") : Text("Mark Today as Achieved"))
                     .font(.headline)
             }
             .frame(maxWidth: .infinity)
@@ -148,11 +148,11 @@ struct GoalDetailView: View {
         LazyVGrid(columns: [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)], spacing: 12) {
             StatTile(icon: "flame.fill", title: "Current Streak", value: goal.streak(asOf: today).daysLabel, color: .orange)
             StatTile(icon: "trophy.fill", title: "Best Streak", value: goal.longestStreak.daysLabel, color: .yellow)
-            StatTile(icon: "checkmark.seal.fill", title: "Days Achieved", value: "\(goal.completedDaysCount)", color: .green)
+            StatTile(icon: "checkmark.seal.fill", title: "Days Achieved", value: goal.completedDaysCount.formatted(), color: .green)
             StatTile(
                 icon: "chart.line.uptrend.xyaxis",
                 title: "Success Rate",
-                value: "\(Int((goal.successRate(asOf: today) * 100).rounded()))%",
+                value: goal.successRate(asOf: today).formatted(.percent.precision(.fractionLength(0))),
                 color: .blue
             )
         }
@@ -167,14 +167,14 @@ struct GoalDetailView: View {
             detailRow(
                 icon: goal.reminderEnabled ? "bell.fill" : "bell.slash.fill",
                 title: "Daily reminder",
-                value: goal.reminderEnabled ? goal.reminderTime.formatted(date: .omitted, time: .shortened) : "Off"
+                value: goal.reminderEnabled ? goal.reminderTime.formatted(date: .omitted, time: .shortened) : String(localized: "Off")
             )
         }
         .padding(.vertical, 4)
         .cardStyle(cornerRadius: 18)
     }
 
-    private func detailRow(icon: String, title: String, value: String) -> some View {
+    private func detailRow(icon: String, title: LocalizedStringKey, value: String) -> some View {
         HStack(spacing: 12) {
             Image(systemName: icon)
                 .font(.subheadline)
@@ -190,8 +190,31 @@ struct GoalDetailView: View {
         .padding(.vertical, 13)
     }
 
+    private var progressShareContent: ShareCardContent {
+        let streak = goal.streak(asOf: today)
+        let message = streak > 1
+            ? String(localized: "\(goal.displayedCompletedDays) of \(goal.targetDays) days · 🔥 \(streak.daysLabel) streak")
+            : String(localized: "\(goal.displayedCompletedDays) of \(goal.targetDays) days")
+        return ShareCardContent(
+            headline: String(localized: "My Progress"),
+            title: goal.title,
+            message: message,
+            icon: goal.category.icon,
+            colors: [goal.category.color, goal.category.color.opacity(0.7)],
+            ringColors: [.white, .white.opacity(0.6)],
+            progress: goal.progressRatio,
+            shareText: String(localized: "I'm working on “\(goal.title)” with Ritm: \(message)")
+        )
+    }
+
     @ToolbarContentBuilder
     private var toolbarMenu: some ToolbarContent {
+        ToolbarItem(placement: .topBarTrailing) {
+            ShareCardButton(content: progressShareContent) {
+                Image(systemName: "square.and.arrow.up")
+            }
+            .accessibilityLabel(Text("Share Progress"))
+        }
         ToolbarItem(placement: .topBarTrailing) {
             Menu {
                 Button {
@@ -202,8 +225,11 @@ struct GoalDetailView: View {
                 Button {
                     toggleArchive()
                 } label: {
-                    Label(goal.isArchived ? "Restore Goal" : "Archive Goal",
-                          systemImage: goal.isArchived ? "tray.and.arrow.up" : "archivebox")
+                    if goal.isArchived {
+                        Label("Restore Goal", systemImage: "tray.and.arrow.up")
+                    } else {
+                        Label("Archive Goal", systemImage: "archivebox")
+                    }
                 }
                 Divider()
                 Button(role: .destructive) {
@@ -214,7 +240,7 @@ struct GoalDetailView: View {
             } label: {
                 Image(systemName: "ellipsis.circle")
             }
-            .accessibilityLabel("Goal options")
+            .accessibilityLabel(Text("Goal options"))
         }
     }
 
@@ -228,6 +254,7 @@ struct GoalDetailView: View {
         withAnimation(.spring(response: 0.4, dampingFraction: 0.7)) {
             goal.toggleAchieved(on: date)
         }
+        AppEvents.goalsDidChange(in: modelContext)
         if wasComplete != goal.isChallengeComplete {
             Task { await notifications.scheduleReminder(for: goal, requestPermissionIfNeeded: false) }
         }
@@ -235,7 +262,7 @@ struct GoalDetailView: View {
 
     private func toggleArchive() {
         goal.isArchived.toggle()
-        try? modelContext.save()
+        AppEvents.goalsDidChange(in: modelContext)
 
         if goal.isArchived {
             notifications.cancelReminder(for: goal.id)
@@ -248,7 +275,7 @@ struct GoalDetailView: View {
     private func delete() {
         notifications.cancelReminder(for: goal.id)
         modelContext.delete(goal) // cascades to all DailyLogs
-        try? modelContext.save()
+        AppEvents.goalsDidChange(in: modelContext)
         dismiss()
     }
 }
