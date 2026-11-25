@@ -88,8 +88,11 @@ struct InsightsReport {
         self.range = range
         self.analytics = analytics
 
-        periodEnd = today
-        periodStart = today.addingDays(-(range.dayCount - 1))
+        // Local copies: closures below can't read `self` until every property is set.
+        let periodStart = today.addingDays(-(range.dayCount - 1))
+        let periodEnd = today
+        self.periodStart = periodStart
+        self.periodEnd = periodEnd
         let previousEnd = periodStart.addingDays(-1)
         let previousStart = previousEnd.addingDays(-(range.dayCount - 1))
 
