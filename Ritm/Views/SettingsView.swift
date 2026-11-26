@@ -52,6 +52,11 @@ struct SettingsView: View {
                                 }
                             }
                         }
+                        NavigationLink {
+                            ProfileView(userID: user.id)
+                        } label: {
+                            Label("My Profile", systemImage: "person.crop.circle.fill")
+                        }
                         LabeledContent {
                             Text(user.email)
                         } label: {

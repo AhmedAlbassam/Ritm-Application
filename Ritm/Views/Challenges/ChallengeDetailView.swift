@@ -262,6 +262,9 @@ struct LeaderboardCard: View {
             }
 
             ForEach(board) { entry in
+                NavigationLink {
+                    ProfileView(userID: entry.member.id)
+                } label: {
                 HStack(spacing: 12) {
                     RankBadge(rank: entry.rank)
                     AvatarView(name: entry.member.name, id: entry.member.id, size: 38)
@@ -291,6 +294,9 @@ struct LeaderboardCard: View {
                     RoundedRectangle(cornerRadius: 14, style: .continuous)
                         .fill(entry.id == meID ? Color.indigo.opacity(0.08) : .clear)
                 )
+                .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
             }
         }
         .padding(16)

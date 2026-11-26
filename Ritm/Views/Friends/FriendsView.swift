@@ -12,7 +12,12 @@ struct FriendsView: View {
             List {
                 if let user = session.user {
                     Section {
-                        profileCard(user)
+                        ZStack {
+                            // Hidden link so the whole card opens your profile without a list chevron.
+                            NavigationLink { ProfileView(userID: user.id) } label: { EmptyView() }
+                                .opacity(0)
+                            profileCard(user)
+                        }
                     }
                     .listRowBackground(Color.clear)
                     .listRowInsets(EdgeInsets())
@@ -33,8 +38,12 @@ struct FriendsView: View {
                         emptyFriends
                     } else {
                         ForEach(session.friends) { friend in
-                            friendRow(friend)
-                                .swipeActions(edge: .trailing) {
+                            NavigationLink {
+                                ProfileView(userID: friend.id)
+                            } label: {
+                                friendRow(friend)
+                            }
+                            .swipeActions(edge: .trailing) {
                                     Button(role: .destructive) {
                                         friendToRemove = friend
                                     } label: {
@@ -108,14 +117,19 @@ struct FriendsView: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text(user.name)
                     .font(.title3.weight(.bold))
-                Text(user.email)
+                Text(session.myProfile?.bio.isEmpty == false ? session.myProfile?.bio ?? "" : user.email)
                     .font(.subheadline)
                     .opacity(0.85)
-                Text("Friends can add you with your email or phone.")
-                    .font(.caption)
-                    .opacity(0.75)
+                    .lineLimit(2)
+                Label("View & edit profile", systemImage: "pencil.circle.fill")
+                    .font(.caption.weight(.semibold))
+                    .opacity(0.85)
             }
             Spacer(minLength: 0)
+            Image(systemName: "chevron.forward")
+                .font(.subheadline.weight(.bold))
+                .opacity(0.7)
+                .flipsForRightToLeftLayoutDirection(true)
         }
         .foregroundStyle(.white)
         .padding(18)
@@ -128,9 +142,16 @@ struct FriendsView: View {
             VStack(alignment: .leading, spacing: 2) {
                 Text(friend.name)
                     .font(.body.weight(.semibold))
-                Text("Friends since \(friend.since.formatted(.dateTime.month(.abbreviated).year()))")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
+                if let bio = session.profile(for: friend.id)?.bio, !bio.isEmpty {
+                    Text(bio)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                        .lineLimit(1)
+                } else {
+                    Text("Friends since \(friend.since.formatted(.dateTime.month(.abbreviated).year()))")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
             }
             Spacer()
             Button {
@@ -143,7 +164,8 @@ struct FriendsView: View {
                     .padding(.vertical, 8)
                     .background(LinearGradient(colors: [.orange, .pink], startPoint: .leading, endPoint: .trailing), in: Capsule())
             }
-            .buttonStyle(PressableButtonStyle(scale: 0.94))
+            // Borderless keeps this tap separate from the row's link to the profile.
+            .buttonStyle(.borderless)
         }
         .padding(.vertical, 2)
     }

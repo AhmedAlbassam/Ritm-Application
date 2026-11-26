@@ -12,10 +12,15 @@ service cloud.firestore {
       allow read, write: if signedIn() && me() == uid;
     }
 
-    // Public profile: display name + hashed email/phone, used to find friends.
+    // Public profile: name, bio, favorite habit, showcase badges, small photo,
+    // plus hashed email/phone used to find friends.
     match /publicProfiles/{uid} {
       allow read: if signedIn();
-      allow write: if signedIn() && me() == uid;
+      allow write: if signedIn() && me() == uid
+                   && (!('bio' in request.resource.data) || request.resource.data.bio.size() <= 150)
+                   && (!('showcase' in request.resource.data) || request.resource.data.showcase.size() <= 3)
+                   && (!('photo' in request.resource.data) || request.resource.data.photo.size() < 200 * 1024);
+      allow delete: if signedIn() && me() == uid;
     }
 
     match /friendRequests/{id} {

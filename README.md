@@ -15,6 +15,7 @@ Create goals across areas of life, set a target number of days, get a daily remi
 - **Arabic + right-to-left:** the whole app, widgets and notifications are translated, with Arabic plural rules.
 - **Reminders:** one daily notification per goal, with a "Mark as Achieved ✅" button.
 - **Accounts:** a step-by-step sign-up (name, age, email, phone, password with a strength meter), log in, password reset, log out and delete account.
+- **Profiles:** profile photo (cropped and compressed to about 30 KB, stored in Firestore, so no paid Firebase Storage is needed), a bio, a favorite habit, and up to 3 showcase badges.
 - **Friends:** find people by exact email or phone, send and accept requests, and challenge a friend in one tap.
 - **Challenges:** 1 vs 1 or group challenges with live leaderboards, a head-to-head scoreboard, and a group letter grade. When a challenge ends, a results board shows the winner on an animated podium, with confetti and a shareable image.
 

@@ -40,6 +40,7 @@ struct RootView: View {
                 .tag(RootTab.achievements)
         }
         .tint(.indigo)
+        .environment(\.profilePhotos, session.photoImages)
         .overlay {
             if let celebration = celebrations.current {
                 CelebrationOverlay(celebration: celebration) {

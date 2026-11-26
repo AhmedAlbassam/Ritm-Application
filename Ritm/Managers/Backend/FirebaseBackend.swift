@@ -146,6 +146,43 @@ final class FirebaseBackend: SocialBackend {
         return profile
     }
 
+    // MARK: Profiles
+
+    func fetchPublicProfiles(ids: [String]) async throws -> [PublicProfile] {
+        let unique = Array(Set(ids))
+        var result: [PublicProfile] = []
+        // Firestore allows up to 30 values in an `in` query.
+        for start in stride(from: 0, to: unique.count, by: 30) {
+            let chunk = Array(unique[start..<min(start + 30, unique.count)])
+            let docs = try await db.collection("publicProfiles")
+                .whereField(FieldPath.documentID(), in: chunk)
+                .getDocuments()
+                .documents
+            result += docs.map(Self.publicProfile)
+        }
+        return result
+    }
+
+    func updateMyProfile(_ update: ProfileUpdate) async throws {
+        let me = try uid
+        var fields: [String: Any] = [
+            "bio": String(update.bio.prefix(PublicProfile.bioLimit)),
+            "favoriteHabit": update.favoriteHabit,
+            "favoriteCategory": update.favoriteCategory?.rawValue ?? "",
+            "showcase": Array(update.showcase.prefix(PublicProfile.showcaseLimit)),
+        ]
+        switch update.photo {
+        case .keep: break
+        case .remove: fields["photo"] = FieldValue.delete()
+        case .set(let data): fields["photo"] = data
+        }
+        do {
+            try await db.collection("publicProfiles").document(me).setData(fields, merge: true)
+        } catch {
+            throw Self.map(error)
+        }
+    }
+
     // MARK: Friends
 
     func findUser(emailOrPhone: String) async throws -> PublicProfile? {
@@ -159,7 +196,7 @@ final class FirebaseBackend: SocialBackend {
             let docs = try await db.collection("publicProfiles").whereField(field, isEqualTo: hash).limit(to: 1).getDocuments().documents
             guard let doc = docs.first else { return nil }
             if doc.documentID == me { throw BackendError.cannotAddYourself }
-            return PublicProfile(id: doc.documentID, name: doc.data()["name"] as? String ?? "")
+            return Self.publicProfile(doc)
         } catch let error as BackendError {
             throw error
         } catch {
@@ -315,6 +352,19 @@ final class FirebaseBackend: SocialBackend {
 
     private static func friendshipID(_ a: String, _ b: String) -> String {
         [a, b].sorted().joined(separator: "_")
+    }
+
+    private static func publicProfile(_ doc: QueryDocumentSnapshot) -> PublicProfile {
+        let data = doc.data()
+        return PublicProfile(
+            id: doc.documentID,
+            name: data["name"] as? String ?? "",
+            bio: data["bio"] as? String ?? "",
+            favoriteHabit: data["favoriteHabit"] as? String ?? "",
+            favoriteCategory: GoalCategory(rawValue: data["favoriteCategory"] as? String ?? ""),
+            showcase: data["showcase"] as? [String] ?? [],
+            photo: data["photo"] as? Data
+        )
     }
 
     private static func request(_ doc: QueryDocumentSnapshot) -> FriendRequest? {

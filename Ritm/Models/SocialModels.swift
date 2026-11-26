@@ -13,10 +13,33 @@ struct UserProfile: Codable, Equatable, Identifiable {
     var createdAt: Date
 }
 
-/// What other users can see: a name to show and hashed contact details for lookup.
+/// What other users can see on someone's profile.
 struct PublicProfile: Codable, Hashable, Identifiable {
     let id: String
     var name: String
+    var bio: String = ""
+    var favoriteHabit: String = ""
+    var favoriteCategory: GoalCategory?
+    /// Up to 3 `Achievement` raw values chosen to show off.
+    var showcase: [String] = []
+    /// A small square JPEG (about 30 KB).
+    var photo: Data?
+
+    static let bioLimit = 150
+    static let showcaseLimit = 3
+
+    var showcaseAchievements: [Achievement] { showcase.compactMap(Achievement.init(rawValue:)) }
+}
+
+/// Changes the user makes on the Edit Profile screen.
+struct ProfileUpdate {
+    enum PhotoChange { case keep, remove, set(Data) }
+
+    var bio: String
+    var favoriteHabit: String
+    var favoriteCategory: GoalCategory?
+    var showcase: [String]
+    var photo: PhotoChange
 }
 
 struct Friend: Codable, Hashable, Identifiable {

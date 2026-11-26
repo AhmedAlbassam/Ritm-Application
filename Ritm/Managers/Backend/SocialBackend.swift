@@ -15,6 +15,10 @@ protocol SocialBackend: AnyObject {
     func signOut() throws
     func deleteAccount() async throws
 
+    // Profiles
+    func fetchPublicProfiles(ids: [String]) async throws -> [PublicProfile]
+    func updateMyProfile(_ update: ProfileUpdate) async throws
+
     // Friends
     func findUser(emailOrPhone: String) async throws -> PublicProfile?
     func fetchFriends() async throws -> [Friend]

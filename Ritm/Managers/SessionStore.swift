@@ -1,5 +1,6 @@
 import Foundation
 import Observation
+import UIKit
 
 /// Who's logged in, plus the cached friends and challenges for the social tabs.
 @MainActor
@@ -16,6 +17,10 @@ final class SessionStore {
     private(set) var incomingRequests: [FriendRequest] = []
     private(set) var outgoingRequests: [FriendRequest] = []
     private(set) var challenges: [Challenge] = []
+    /// Public profiles of you, your friends, requesters and challenge members.
+    private(set) var profiles: [String: PublicProfile] = [:]
+    /// Decoded profile photos, keyed by user ID.
+    private(set) var photoImages: [String: UIImage] = [:]
     private(set) var isRefreshing = false
     var errorMessage: String?
     /// Set right after login/sign-up to show a welcome banner.
@@ -113,6 +118,8 @@ final class SessionStore {
         incomingRequests = []
         outgoingRequests = []
         challenges = []
+        profiles = [:]
+        photoImages = [:]
         phase = .signedOut
     }
 
@@ -141,6 +148,31 @@ final class SessionStore {
         } catch {
             errorMessage = error.localizedDescription
         }
+        await refreshProfiles()
+    }
+
+    /// Profiles are a nice-to-have, so failures here are silent.
+    private func refreshProfiles() async {
+        guard let backend, let me = user?.id else { return }
+        var ids = Set([me])
+        ids.formUnion(friends.map(\.id))
+        ids.formUnion(incomingRequests.map(\.fromID))
+        ids.formUnion(outgoingRequests.map(\.toID))
+        ids.formUnion(challenges.flatMap { $0.members.map(\.id) })
+        guard let fetched = try? await backend.fetchPublicProfiles(ids: Array(ids)) else { return }
+        profiles = Dictionary(fetched.map { ($0.id, $0) }, uniquingKeysWith: { first, _ in first })
+        photoImages = profiles.compactMapValues { $0.photo.flatMap(UIImage.init(data:)) }
+    }
+
+    func profile(for id: String) -> PublicProfile? { profiles[id] }
+
+    var myProfile: PublicProfile? {
+        guard let user else { return nil }
+        return profiles[user.id] ?? PublicProfile(id: user.id, name: user.name)
+    }
+
+    func updateProfile(_ update: ProfileUpdate) async -> Bool {
+        await perform { try await $0.updateMyProfile(update) }
     }
 
     /// Runs an action, then refreshes. Errors are shown in an alert.

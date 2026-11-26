@@ -23,9 +23,10 @@ final class DemoBackend: SocialBackend {
         var incoming: [FriendRequest]
         var outgoing: [FriendRequest]
         var challenges: [Challenge]
+        var profiles: [String: PublicProfile]
     }
 
-    private static let stateVersion = 1
+    private static let stateVersion = 2
     private static let fileURL = URL.applicationSupportDirectory.appending(path: "ritm-demo.json")
 
     private var state: State
@@ -80,7 +81,32 @@ final class DemoBackend: SocialBackend {
         let match = state.directory.first {
             $0.email.lowercased() == query || (!digits.isEmpty && $0.phone.filter(\.isNumber) == digits)
         }
-        return match.map { PublicProfile(id: $0.id, name: $0.name) }
+        return match.map { state.profiles[$0.id] ?? PublicProfile(id: $0.id, name: $0.name) }
+    }
+
+    // MARK: Profiles
+
+    func fetchPublicProfiles(ids: [String]) async throws -> [PublicProfile] {
+        ids.compactMap { id in
+            if let profile = state.profiles[id] { return profile }
+            if let user = state.directory.first(where: { $0.id == id }) { return PublicProfile(id: user.id, name: user.name) }
+            return nil
+        }
+    }
+
+    func updateMyProfile(_ update: ProfileUpdate) async throws {
+        var profile = state.profiles[me] ?? PublicProfile(id: me, name: state.me.name)
+        profile.bio = String(update.bio.prefix(PublicProfile.bioLimit))
+        profile.favoriteHabit = update.favoriteHabit
+        profile.favoriteCategory = update.favoriteCategory
+        profile.showcase = Array(update.showcase.prefix(PublicProfile.showcaseLimit))
+        switch update.photo {
+        case .keep: break
+        case .remove: profile.photo = nil
+        case .set(let data): profile.photo = data
+        }
+        state.profiles[me] = profile
+        save()
     }
 
     func fetchFriends() async throws -> [Friend] {
@@ -294,6 +320,27 @@ final class DemoBackend: SocialBackend {
             status: .pending, createdAt: today
         )
 
+        let profiles: [PublicProfile] = [
+            PublicProfile(id: admin.id, name: admin.name, bio: String(localized: "Building better habits one day at a time."),
+                          favoriteHabit: String(localized: "Walk for 30 min daily"), favoriteCategory: .health),
+            PublicProfile(id: "demo-sara", name: "Sara", bio: String(localized: "Morning runner ☀️ Coffee after, always."),
+                          favoriteHabit: String(localized: "Morning run"), favoriteCategory: .health,
+                          showcase: [Achievement.streak30.rawValue, Achievement.perfectWeek.rawValue, Achievement.firstChallenge.rawValue]),
+            PublicProfile(id: "demo-omar", name: "Omar", bio: String(localized: "Deep work, then gym."),
+                          favoriteHabit: String(localized: "Deep work for 1 hour"), favoriteCategory: .work,
+                          showcase: [Achievement.streak7.rawValue, Achievement.checkIns50.rawValue]),
+            PublicProfile(id: "demo-lina", name: "Lina", bio: String(localized: "Reading 20 books this year 📚"),
+                          favoriteHabit: String(localized: "Read 10 pages"), favoriteCategory: .learning,
+                          showcase: [Achievement.streak21.rawValue, Achievement.checkIns100.rawValue, Achievement.explorer.rawValue]),
+            PublicProfile(id: "demo-khalid", name: "Khalid", bio: String(localized: "Saving for my first car 🚗"),
+                          favoriteHabit: String(localized: "No takeout spending"), favoriteCategory: .finance,
+                          showcase: [Achievement.firstStep.rawValue]),
+            PublicProfile(id: "demo-faisal", name: "Faisal", favoriteHabit: String(localized: "Drink 8 glasses of water"), favoriteCategory: .health),
+            PublicProfile(id: "demo-noura", name: "Noura", bio: String(localized: "Learning Spanish, slowly but surely."),
+                          favoriteHabit: String(localized: "Practice a language"), favoriteCategory: .learning,
+                          showcase: [Achievement.streak14.rawValue]),
+        ]
+
         return State(
             version: stateVersion,
             me: admin,
@@ -301,7 +348,8 @@ final class DemoBackend: SocialBackend {
             friends: Array(friends),
             incoming: [request],
             outgoing: [],
-            challenges: [duel, group, finished, invite]
+            challenges: [duel, group, finished, invite],
+            profiles: Dictionary(uniqueKeysWithValues: profiles.map { ($0.id, $0) })
         )
     }
 }

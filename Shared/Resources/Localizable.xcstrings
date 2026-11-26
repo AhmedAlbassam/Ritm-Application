@@ -553,6 +553,16 @@
         }
       }
     },
+    "Add Photo": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إضافة صورة"
+          }
+        }
+      }
+    },
     "Add a Friend": {
       "localizations": {
         "ar": {
@@ -569,6 +579,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "أضف هدفًا"
+          }
+        }
+      }
+    },
+    "Add a bio": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أضف نبذة"
           }
         }
       }
@@ -773,6 +793,16 @@
         }
       }
     },
+    "Badges": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الأوسمة"
+          }
+        }
+      }
+    },
     "Balance": {
       "localizations": {
         "ar": {
@@ -833,6 +863,16 @@
         }
       }
     },
+    "Bio": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نبذة"
+          }
+        }
+      }
+    },
     "Bronze": {
       "localizations": {
         "ar": {
@@ -869,6 +909,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "ابنِ رتمك اليومي — مع أصدقائك."
+          }
+        }
+      }
+    },
+    "Building better habits one day at a time.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أبني عادات أفضل يومًا بعد يوم."
           }
         }
       }
@@ -993,6 +1043,36 @@
         }
       }
     },
+    "Challenges together": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تحديات مشتركة"
+          }
+        }
+      }
+    },
+    "Change": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تغيير"
+          }
+        }
+      }
+    },
+    "Change Photo": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تغيير الصورة"
+          }
+        }
+      }
+    },
     "Check in 10 times.": {
       "localizations": {
         "ar": {
@@ -1093,6 +1173,16 @@
         }
       }
     },
+    "Choose": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اختيار"
+          }
+        }
+      }
+    },
     "Choose English or العربية for Ritm in the iOS Settings app. In Arabic, the whole app switches to a right-to-left layout.": {
       "localizations": {
         "ar": {
@@ -1109,6 +1199,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "اختر كلمة مرور لا تستخدمها في مكان آخر."
+          }
+        }
+      }
+    },
+    "Choose a profile photo": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اختر صورة للملف الشخصي"
           }
         }
       }
@@ -1443,6 +1543,16 @@
         }
       }
     },
+    "Deep work, then gym.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "عمل مركّز، ثم النادي."
+          }
+        }
+      }
+    },
     "Delete": {
       "localizations": {
         "ar": {
@@ -1563,6 +1673,16 @@
         }
       }
     },
+    "Drink 8 glasses of water": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "شرب ٨ أكواب ماء"
+          }
+        }
+      }
+    },
     "Duration & start": {
       "localizations": {
         "ar": {
@@ -1573,12 +1693,42 @@
         }
       }
     },
+    "Earn badges in the Achievements tab to show them here.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "احصل على أوسمة من تبويب الأوسمة لتعرضها هنا."
+          }
+        }
+      }
+    },
+    "Edit": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تعديل"
+          }
+        }
+      }
+    },
     "Edit Goal": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
             "value": "تعديل الهدف"
+          }
+        }
+      }
+    },
+    "Edit Profile": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تعديل الملف الشخصي"
           }
         }
       }
@@ -1659,6 +1809,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "المستكشف"
+          }
+        }
+      }
+    },
+    "Favorite Habit": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "العادة المفضلة"
           }
         }
       }
@@ -2243,6 +2403,16 @@
         }
       }
     },
+    "Learning Spanish, slowly but surely.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أتعلم الإسبانية، ببطء لكن بثبات."
+          }
+        }
+      }
+    },
     "Leave": {
       "localizations": {
         "ar": {
@@ -2523,6 +2693,36 @@
         }
       }
     },
+    "Morning run": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الجري الصباحي"
+          }
+        }
+      }
+    },
+    "Morning runner ☀️ Coffee after, always.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "عدّاءة صباحية ☀️ والقهوة بعدها دائمًا."
+          }
+        }
+      }
+    },
+    "My Profile": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ملفي الشخصي"
+          }
+        }
+      }
+    },
     "My Progress": {
       "localizations": {
         "ar": {
@@ -2609,6 +2809,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "لا يوجد مستخدم في رتم بهذا البريد أو الرقم."
+          }
+        }
+      }
+    },
+    "No badges showcased yet.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لا توجد أوسمة معروضة بعد."
           }
         }
       }
@@ -2993,6 +3203,16 @@
         }
       }
     },
+    "Pick up to 3 badges you've earned to show your friends.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اختر حتى ٣ أوسمة حصلت عليها لتعرضها لأصدقائك."
+          }
+        }
+      }
+    },
     "Planned finish": {
       "localizations": {
         "ar": {
@@ -3039,6 +3259,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "يرجى تسجيل الدخول مرة أخرى."
+          }
+        }
+      }
+    },
+    "Practice a language": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ممارسة لغة جديدة"
           }
         }
       }
@@ -3139,6 +3369,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "قراءة ١٠ صفحات"
+          }
+        }
+      }
+    },
+    "Reading 20 books this year 📚": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أقرأ ٢٠ كتابًا هذا العام 📚"
           }
         }
       }
@@ -3293,6 +3533,16 @@
         }
       }
     },
+    "Saving for my first car 🚗": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أدّخر لسيارتي الأولى 🚗"
+          }
+        }
+      }
+    },
     "Search": {
       "localizations": {
         "ar": {
@@ -3429,6 +3679,36 @@
           "stringUnit": {
             "state": "translated",
             "value": "إظهار كلمة المرور"
+          }
+        }
+      }
+    },
+    "Showcase": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الأوسمة المعروضة"
+          }
+        }
+      }
+    },
+    "Showcase Badges": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الأوسمة المعروضة"
+          }
+        }
+      }
+    },
+    "Showcased": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "معروضة"
           }
         }
       }
@@ -3593,6 +3873,16 @@
         }
       }
     },
+    "Tap to pick up to 3, in the order you want them shown.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اضغط لاختيار حتى ٣ أوسمة بالترتيب الذي تريد عرضها به."
+          }
+        }
+      }
+    },
     "Tap to read the full quote": {
       "localizations": {
         "ar": {
@@ -3649,6 +3939,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "يبدو أن البريد الإلكتروني غير صحيح."
+          }
+        }
+      }
+    },
+    "That photo couldn't be loaded. Please try another one.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تعذّر تحميل هذه الصورة. جرّب صورة أخرى."
           }
         }
       }
@@ -3893,6 +4193,16 @@
         }
       }
     },
+    "View & edit profile": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "عرض الملف وتعديله"
+          }
+        }
+      }
+    },
     "View Results": {
       "localizations": {
         "ar": {
@@ -4033,6 +4343,16 @@
         }
       }
     },
+    "Write a little about yourself…": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اكتب شيئًا عن نفسك…"
+          }
+        }
+      }
+    },
     "Year": {
       "localizations": {
         "ar": {
@@ -4169,6 +4489,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "مثال: %@"
+          }
+        }
+      }
+    },
+    "e.g., Morning walk": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مثال: المشي الصباحي"
           }
         }
       }
