@@ -170,7 +170,12 @@ final class DemoBackend: SocialBackend {
 
     private func update(_ id: String, _ change: (inout Challenge) -> Void) {
         guard let index = state.challenges.firstIndex(where: { $0.id == id }) else { return }
-        change(&state.challenges[index])
+        // Edit a copy, then write it back. Passing `&state.challenges[index]` directly
+        // would lock `state` while `change` runs, and the closure reads `self.me`
+        // (which is `state.me.id`), which is an exclusivity violation that crashes.
+        var challenge = state.challenges[index]
+        change(&challenge)
+        state.challenges[index] = challenge
         save()
     }
 
