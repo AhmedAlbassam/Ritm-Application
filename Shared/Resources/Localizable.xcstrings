@@ -3043,6 +3043,16 @@
         }
       }
     },
+    "Quote of the Day": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اقتباس اليوم"
+          }
+        }
+      }
+    },
     "Range": {
       "localizations": {
         "ar": {
@@ -3389,6 +3399,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "مشاركة النتائج"
+          }
+        }
+      }
+    },
+    "Share quote": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مشاركة الاقتباس"
           }
         }
       }

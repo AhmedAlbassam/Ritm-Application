@@ -58,6 +58,8 @@ struct TodayView: View {
                 .textCase(.uppercase)
                 .padding(.top, -8)
 
+            QuoteOfTheDayCard(date: viewModel.today)
+
             if goals.isEmpty {
                 EmptyStateView(
                     onCreate: { viewModel.addGoalRequest = AddGoalRequest() },
