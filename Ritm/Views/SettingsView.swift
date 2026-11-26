@@ -4,6 +4,10 @@ import UIKit
 struct SettingsView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(NotificationManager.self) private var notifications
+    @Environment(SessionStore.self) private var session
+    @State private var confirmSignOut = false
+    @State private var confirmDelete = false
+    @State private var isDeleting = false
 
     private var currentLanguageName: String {
         let code = Bundle.main.preferredLocalizations.first ?? "en"
@@ -32,6 +36,55 @@ struct SettingsView: View {
                         }
                     }
                     .padding(.vertical, 6)
+                }
+
+                if let user = session.user {
+                    Section {
+                        HStack(spacing: 14) {
+                            AvatarView(name: user.name, id: user.id, size: 48)
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text(user.name)
+                                    .font(.headline)
+                                if session.isDemo {
+                                    Text("Demo account")
+                                        .font(.caption.weight(.semibold))
+                                        .foregroundStyle(.orange)
+                                }
+                            }
+                        }
+                        LabeledContent {
+                            Text(user.email)
+                        } label: {
+                            Label("Email", systemImage: "envelope.fill")
+                        }
+                        LabeledContent {
+                            Text(user.phone)
+                        } label: {
+                            Label("Phone", systemImage: "phone.fill")
+                        }
+                        LabeledContent {
+                            Text(user.age, format: .number)
+                        } label: {
+                            Label("Age", systemImage: "birthday.cake.fill")
+                        }
+                        Button {
+                            confirmSignOut = true
+                        } label: {
+                            Label("Log Out", systemImage: "rectangle.portrait.and.arrow.right")
+                        }
+                        Button(role: .destructive) {
+                            confirmDelete = true
+                        } label: {
+                            if isDeleting {
+                                ProgressView()
+                            } else {
+                                Label("Delete Account", systemImage: "person.crop.circle.badge.xmark")
+                            }
+                        }
+                        .disabled(isDeleting)
+                    } header: {
+                        Text("Account")
+                    }
                 }
 
                 Section {
@@ -100,6 +153,34 @@ struct SettingsView: View {
                 }
             }
             .task { await notifications.refreshAuthorizationStatus() }
+            .confirmationDialog("Log out of Ritm?", isPresented: $confirmSignOut, titleVisibility: .visible) {
+                Button("Log Out", role: .destructive) {
+                    dismiss()
+                    session.signOut()
+                }
+                Button("Cancel", role: .cancel) {}
+            } message: {
+                Text("Your personal goals stay on this device.")
+            }
+            .confirmationDialog("Delete your account?", isPresented: $confirmDelete, titleVisibility: .visible) {
+                Button("Delete Account", role: .destructive) { deleteAccount() }
+                Button("Cancel", role: .cancel) {}
+            } message: {
+                Text("This permanently deletes your Ritm account, profile and friendships. This can't be undone.")
+            }
+        }
+    }
+
+    private func deleteAccount() {
+        isDeleting = true
+        Task {
+            do {
+                try await session.deleteAccount()
+                dismiss()
+            } catch {
+                session.errorMessage = error.localizedDescription
+            }
+            isDeleting = false
         }
     }
 

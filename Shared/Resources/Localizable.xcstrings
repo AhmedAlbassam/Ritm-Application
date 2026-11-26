@@ -1,6 +1,36 @@
 {
   "sourceLanguage": "en",
   "strings": {
+    "#%lld of %lld": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "#%1$lld من %2$lld"
+          }
+        }
+      }
+    },
+    "%@ challenged you!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ يتحداك!"
+          }
+        }
+      }
+    },
+    "%@ leads by %@": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ متقدّم بفارق %2$@"
+          }
+        }
+      }
+    },
     "%@ of “%@” complete": {
       "localizations": {
         "ar": {
@@ -21,12 +51,42 @@
         }
       }
     },
+    "%@ wins!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فاز %@!"
+          }
+        }
+      }
+    },
+    "%@ · %@ · starts %@": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ · %2$@ · يبدأ %3$@"
+          }
+        }
+      }
+    },
     "%@ · %lld days": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
             "value": "%1$@ · %2$lld يوم"
+          }
+        }
+      }
+    },
+    "%@ “%@” on Ritm 🏆": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ «%2$@» في رتم 🏆"
           }
         }
       }
@@ -313,6 +373,16 @@
         }
       }
     },
+    "%lld selected": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تم اختيار %lld"
+          }
+        }
+      }
+    },
     "%lld/%lld goals done": {
       "localizations": {
         "ar": {
@@ -323,12 +393,62 @@
         }
       }
     },
+    "1 vs 1": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "١ ضد ١"
+          }
+        }
+      }
+    },
+    "A start. Next time, stronger!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بداية. المرة القادمة أقوى!"
+          }
+        }
+      }
+    },
+    "A symbol for extra strength (optional)": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "رمز لقوة إضافية (اختياري)"
+          }
+        }
+      }
+    },
     "About": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
             "value": "حول التطبيق"
+          }
+        }
+      }
+    },
+    "Accept": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "قبول"
+          }
+        }
+      }
+    },
+    "Account": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الحساب"
           }
         }
       }
@@ -393,6 +513,16 @@
         }
       }
     },
+    "Active": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "النشطة"
+          }
+        }
+      }
+    },
     "Add": {
       "localizations": {
         "ar": {
@@ -403,12 +533,32 @@
         }
       }
     },
+    "Add Friend": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إضافة صديق"
+          }
+        }
+      }
+    },
     "Add Goal": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
             "value": "إضافة هدف"
+          }
+        }
+      }
+    },
+    "Add a Friend": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أضف صديقًا"
           }
         }
       }
@@ -433,12 +583,42 @@
         }
       }
     },
+    "Add friends by their email or phone number, then challenge them!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أضف أصدقاءك ببريدهم أو أرقامهم، ثم تحدَّهم!"
+          }
+        }
+      }
+    },
+    "Add friends in the Friends tab to challenge them.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أضف أصدقاءك من تبويب الأصدقاء لتتحداهم."
+          }
+        }
+      }
+    },
     "Add your first goal in Ritm.": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
             "value": "أضف هدفك الأول في رتم."
+          }
+        }
+      }
+    },
+    "Age": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "العمر"
           }
         }
       }
@@ -513,6 +693,16 @@
         }
       }
     },
+    "An account with this email already exists. Try logging in instead.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يوجد حساب بهذا البريد بالفعل. جرّب تسجيل الدخول."
+          }
+        }
+      }
+    },
     "App Language": {
       "localizations": {
         "ar": {
@@ -549,6 +739,36 @@
           "stringUnit": {
             "state": "translated",
             "value": "الأهداف المؤرشفة"
+          }
+        }
+      }
+    },
+    "At least 8 characters": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "٨ أحرف على الأقل"
+          }
+        }
+      }
+    },
+    "Average completion: %@": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "متوسط الإنجاز: %@"
+          }
+        }
+      }
+    },
+    "Back": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "رجوع"
           }
         }
       }
@@ -643,6 +863,16 @@
         }
       }
     },
+    "Build your daily rhythm — together.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ابنِ رتمك اليومي — مع أصدقائك."
+          }
+        }
+      }
+    },
     "Cancel": {
       "localizations": {
         "ar": {
@@ -663,12 +893,42 @@
         }
       }
     },
+    "Challenge": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تحدَّ"
+          }
+        }
+      }
+    },
     "Challenge Champion": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
             "value": "بطل التحدي"
+          }
+        }
+      }
+    },
+    "Challenge Results": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نتائج التحدي"
+          }
+        }
+      }
+    },
+    "Challenge Your Friends": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تحدَّ أصدقاءك"
           }
         }
       }
@@ -689,6 +949,36 @@
           "stringUnit": {
             "state": "translated",
             "value": "اكتمل التحدي!"
+          }
+        }
+      }
+    },
+    "Challenge in Progress": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تحدٍّ جارٍ"
+          }
+        }
+      }
+    },
+    "Challenge not found": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "التحدي غير موجود"
+          }
+        }
+      }
+    },
+    "Challenge type": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نوع التحدي"
           }
         }
       }
@@ -743,6 +1033,16 @@
         }
       }
     },
+    "Check in for today": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سجّل إنجاز اليوم"
+          }
+        }
+      }
+    },
     "Check in on %@ to complete the challenge — as early as %@.": {
       "localizations": {
         "ar": {
@@ -759,6 +1059,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "سجّل إنجازك لتبدأ سلسلة"
+          }
+        }
+      }
+    },
+    "Check your inbox": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تفقّد بريدك"
           }
         }
       }
@@ -793,12 +1103,52 @@
         }
       }
     },
+    "Choose a password you don't use anywhere else.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اختر كلمة مرور لا تستخدمها في مكان آخر."
+          }
+        }
+      }
+    },
+    "Choose your opponent": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اختر منافسك"
+          }
+        }
+      }
+    },
+    "Close": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إغلاق"
+          }
+        }
+      }
+    },
     "Committed": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
             "value": "ملتزم"
+          }
+        }
+      }
+    },
+    "Compete with a group of friends": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تنافس مع مجموعة من الأصدقاء"
           }
         }
       }
@@ -863,6 +1213,16 @@
         }
       }
     },
+    "Confirm password": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تأكيد كلمة المرور"
+          }
+        }
+      }
+    },
     "Connected": {
       "localizations": {
         "ar": {
@@ -899,6 +1259,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "متابعة"
+          }
+        }
+      }
+    },
+    "Create Account": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إنشاء الحساب"
+          }
+        }
+      }
+    },
+    "Create a Challenge": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أنشئ تحديًا"
           }
         }
       }
@@ -1003,6 +1383,26 @@
         }
       }
     },
+    "Day": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اليوم"
+          }
+        }
+      }
+    },
+    "Day %lld of %lld": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اليوم %1$lld من %2$lld"
+          }
+        }
+      }
+    },
     "Day %lld, %@": {
       "localizations": {
         "ar": {
@@ -1019,6 +1419,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "أيام الإنجاز"
+          }
+        }
+      }
+    },
+    "Decline": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "رفض"
           }
         }
       }
@@ -1043,12 +1453,42 @@
         }
       }
     },
+    "Delete Account": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حذف الحساب"
+          }
+        }
+      }
+    },
+    "Delete Challenge": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حذف التحدي"
+          }
+        }
+      }
+    },
     "Delete Goal": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
             "value": "حذف الهدف"
+          }
+        }
+      }
+    },
+    "Delete this challenge for everyone?": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حذف هذا التحدي للجميع؟"
           }
         }
       }
@@ -1063,6 +1503,46 @@
         }
       }
     },
+    "Delete your account?": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حذف حسابك؟"
+          }
+        }
+      }
+    },
+    "Demo account": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حساب تجريبي"
+          }
+        }
+      }
+    },
+    "Demo tip: try noura@demo.ritm": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تلميح تجريبي: جرّب noura@demo.ritm"
+          }
+        }
+      }
+    },
+    "Developer: log in as admin (demo data)": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "للمطوّر: الدخول كمسؤول (بيانات تجريبية)"
+          }
+        }
+      }
+    },
     "Done": {
       "localizations": {
         "ar": {
@@ -1073,12 +1553,102 @@
         }
       }
     },
+    "Done for today!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أنجزت اليوم!"
+          }
+        }
+      }
+    },
+    "Duration & start": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "المدة والبداية"
+          }
+        }
+      }
+    },
     "Edit Goal": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
             "value": "تعديل الهدف"
+          }
+        }
+      }
+    },
+    "Email": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "البريد الإلكتروني"
+          }
+        }
+      }
+    },
+    "Email or phone": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "البريد أو رقم الجوال"
+          }
+        }
+      }
+    },
+    "Enter a full phone number with country code.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أدخل رقم الجوال كاملًا مع رمز الدولة."
+          }
+        }
+      }
+    },
+    "Enter your account email and we'll send you a reset link.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أدخل بريد حسابك وسنرسل لك رابطًا لإعادة التعيين."
+          }
+        }
+      }
+    },
+    "Enter your age as a number.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أدخل عمرك بالأرقام."
+          }
+        }
+      }
+    },
+    "Every journey starts somewhere.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "كل رحلة تبدأ بخطوة."
+          }
+        }
+      }
+    },
+    "Excellent effort!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "جهد ممتاز!"
           }
         }
       }
@@ -1113,12 +1683,42 @@
         }
       }
     },
+    "Finished": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "انتهى"
+          }
+        }
+      }
+    },
     "First Step": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
             "value": "الخطوة الأولى"
+          }
+        }
+      }
+    },
+    "For your security, please log out and log in again, then retry.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لأمانك، سجّل الخروج ثم ادخل مجددًا وأعد المحاولة."
+          }
+        }
+      }
+    },
+    "Forgot password?": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نسيت كلمة المرور؟"
           }
         }
       }
@@ -1133,12 +1733,92 @@
         }
       }
     },
+    "Friend Requests": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "طلبات الصداقة"
+          }
+        }
+      }
+    },
+    "Friends": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الأصدقاء"
+          }
+        }
+      }
+    },
+    "Friends (%lld)": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الأصدقاء (%lld)"
+          }
+        }
+      }
+    },
+    "Friends add you by your email or phone number.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يضيفك أصدقاؤك عبر بريدك الإلكتروني أو رقم جوالك."
+          }
+        }
+      }
+    },
+    "Friends can add you with your email or phone.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يمكن لأصدقائك إضافتك ببريدك أو رقم جوالك."
+          }
+        }
+      }
+    },
+    "Friends since %@": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أصدقاء منذ %@"
+          }
+        }
+      }
+    },
+    "Full name": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الاسم الكامل"
+          }
+        }
+      }
+    },
     "Getting Started": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
             "value": "انطلاقة موفّقة"
+          }
+        }
+      }
+    },
+    "Go head to head with one friend": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نافس صديقًا واحدًا وجهًا لوجه"
           }
         }
       }
@@ -1223,6 +1903,26 @@
         }
       }
     },
+    "Good effort. Keep pushing!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "جهد جيد. واصلوا!"
+          }
+        }
+      }
+    },
+    "Great job, team!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أحسنتم يا فريق!"
+          }
+        }
+      }
+    },
     "Great momentum. Keep it going!": {
       "localizations": {
         "ar": {
@@ -1239,6 +1939,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "بداية رائعة!"
+          }
+        }
+      }
+    },
+    "Group": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مجموعة"
+          }
+        }
+      }
+    },
+    "Habit": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "العادة"
           }
         }
       }
@@ -1313,6 +2033,26 @@
         }
       }
     },
+    "Hide password": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إخفاء كلمة المرور"
+          }
+        }
+      }
+    },
+    "How can friends find you? 🔎": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "كيف يجدك أصدقاؤك؟ 🔎"
+          }
+        }
+      }
+    },
     "Hundred Club": {
       "localizations": {
         "ar": {
@@ -1333,6 +2073,26 @@
         }
       }
     },
+    "I'm #%lld of %lld": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ترتيبي #%1$lld من %2$lld"
+          }
+        }
+      }
+    },
+    "I'm taking on “%@” with friends on Ritm. %@": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أخوض تحدي «%1$@» مع أصدقائي في رتم. %2$@"
+          }
+        }
+      }
+    },
     "I'm working on “%@” with Ritm: %@": {
       "localizations": {
         "ar": {
@@ -1349,6 +2109,66 @@
           "stringUnit": {
             "state": "translated",
             "value": "الإحصاءات"
+          }
+        }
+      }
+    },
+    "Invitations": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الدعوات"
+          }
+        }
+      }
+    },
+    "Invite friends to Ritm": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ادعُ أصدقاءك إلى رتم"
+          }
+        }
+      }
+    },
+    "Invite your group": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ادعُ مجموعتك"
+          }
+        }
+      }
+    },
+    "It's a draw!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تعادل!"
+          }
+        }
+      }
+    },
+    "It's neck and neck!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "التنافس متقارب جدًا!"
+          }
+        }
+      }
+    },
+    "Join me on Ritm and let's build our daily rhythm together! 💪": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "انضم إليّ في رتم لنبني رتمنا اليومي معًا! 💪"
           }
         }
       }
@@ -1403,12 +2223,52 @@
         }
       }
     },
+    "Leaderboard": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لوحة الترتيب"
+          }
+        }
+      }
+    },
     "Learning": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
             "value": "التعلّم"
+          }
+        }
+      }
+    },
+    "Leave": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مغادرة"
+          }
+        }
+      }
+    },
+    "Leave Challenge": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مغادرة التحدي"
+          }
+        }
+      }
+    },
+    "Leave this challenge?": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مغادرة هذا التحدي؟"
           }
         }
       }
@@ -1433,12 +2293,32 @@
         }
       }
     },
+    "Let's keep the rhythm going.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لنحافظ على الرتم."
+          }
+        }
+      }
+    },
     "Let's make today count. 💪": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
             "value": "لنجعل اليوم مميزًا 💪"
+          }
+        }
+      }
+    },
+    "Letters and numbers": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أحرف وأرقام"
           }
         }
       }
@@ -1479,6 +2359,46 @@
           "stringUnit": {
             "state": "translated",
             "value": "مقفل"
+          }
+        }
+      }
+    },
+    "Log In": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تسجيل الدخول"
+          }
+        }
+      }
+    },
+    "Log Out": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تسجيل الخروج"
+          }
+        }
+      }
+    },
+    "Log in to see your goals and challenges.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سجّل دخولك لترى أهدافك وتحدياتك."
+          }
+        }
+      }
+    },
+    "Log out of Ritm?": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تسجيل الخروج من رتم؟"
           }
         }
       }
@@ -1613,6 +2533,16 @@
         }
       }
     },
+    "New Challenge": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تحدٍّ جديد"
+          }
+        }
+      }
+    },
     "New Goal": {
       "localizations": {
         "ar": {
@@ -1623,12 +2553,32 @@
         }
       }
     },
+    "Next": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "التالي"
+          }
+        }
+      }
+    },
     "Nice start. One step at a time.": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
             "value": "بداية جميلة. خطوة بخطوة."
+          }
+        }
+      }
+    },
+    "Nice to meet you! 👋": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سعداء بلقائك! 👋"
           }
         }
       }
@@ -1653,6 +2603,26 @@
         }
       }
     },
+    "No Ritm user found with that email or phone.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لا يوجد مستخدم في رتم بهذا البريد أو الرقم."
+          }
+        }
+      }
+    },
+    "No friends yet": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لا يوجد أصدقاء بعد"
+          }
+        }
+      }
+    },
     "No goals in %@ yet": {
       "localizations": {
         "ar": {
@@ -1663,12 +2633,42 @@
         }
       }
     },
+    "No internet connection. Please try again.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لا يوجد اتصال بالإنترنت. حاول مرة أخرى."
+          }
+        }
+      }
+    },
+    "No one has joined yet.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لم ينضم أحد بعد."
+          }
+        }
+      }
+    },
     "No takeout spending": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
             "value": "بدون إنفاق على الطلبات الخارجية"
+          }
+        }
+      }
+    },
+    "No winner this time": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لا يوجد فائز هذه المرة"
           }
         }
       }
@@ -1753,6 +2753,16 @@
         }
       }
     },
+    "OK": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حسنًا"
+          }
+        }
+      }
+    },
     "Off": {
       "localizations": {
         "ar": {
@@ -1763,12 +2773,42 @@
         }
       }
     },
+    "Okay": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مقبولة"
+          }
+        }
+      }
+    },
     "One Week Strong": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
             "value": "أسبوع من القوة"
+          }
+        }
+      }
+    },
+    "Online accounts aren't set up yet. Add the Firebase configuration file (see the README), or use the developer admin login.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الحسابات عبر الإنترنت غير مُعدّة بعد. أضف ملف إعداد Firebase (راجع README) أو استخدم دخول المطوّر."
+          }
+        }
+      }
+    },
+    "Online accounts aren't set up yet. See the README to connect Firebase.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الحسابات عبر الإنترنت غير مُعدّة بعد. راجع ملف README لربط Firebase."
           }
         }
       }
@@ -1803,12 +2843,52 @@
         }
       }
     },
+    "Outstanding teamwork!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "عمل جماعي استثنائي!"
+          }
+        }
+      }
+    },
     "PREVIEW": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
             "value": "معاينة"
+          }
+        }
+      }
+    },
+    "Password": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "كلمة المرور"
+          }
+        }
+      }
+    },
+    "Passwords don't match.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "كلمتا المرور غير متطابقتين."
+          }
+        }
+      }
+    },
+    "Pending": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بانتظار الرد"
           }
         }
       }
@@ -1873,12 +2953,92 @@
         }
       }
     },
+    "Phone": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الجوال"
+          }
+        }
+      }
+    },
+    "Phone number (+966…)": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "رقم الجوال (‎+966…)"
+          }
+        }
+      }
+    },
+    "Pick a habit, invite a friend for a 1 vs 1 or a whole group, and see who keeps the rhythm best.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اختر عادة، وادعُ صديقًا لمواجهة فردية أو مجموعة كاملة، وشاهد من يحافظ على الرتم أفضل."
+          }
+        }
+      }
+    },
+    "Pick at least 2 friends for a group challenge.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اختر صديقين على الأقل لتحدي المجموعة."
+          }
+        }
+      }
+    },
     "Planned finish": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
             "value": "الانتهاء المتوقع"
+          }
+        }
+      }
+    },
+    "Please choose a stronger password.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يرجى اختيار كلمة مرور أقوى."
+          }
+        }
+      }
+    },
+    "Please enter a valid age.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يرجى إدخال عمر صحيح."
+          }
+        }
+      }
+    },
+    "Please enter your name.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يرجى إدخال اسمك."
+          }
+        }
+      }
+    },
+    "Please log in again.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يرجى تسجيل الدخول مرة أخرى."
           }
         }
       }
@@ -2023,6 +3183,36 @@
         }
       }
     },
+    "Remove": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إزالة"
+          }
+        }
+      }
+    },
+    "Remove %@ from your friends?": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إزالة %@ من أصدقائك؟"
+          }
+        }
+      }
+    },
+    "Reset your password": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إعادة تعيين كلمة المرور"
+          }
+        }
+      }
+    },
     "Restore": {
       "localizations": {
         "ar": {
@@ -2039,6 +3229,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "استعادة الهدف"
+          }
+        }
+      }
+    },
+    "Results": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "النتائج"
+          }
+        }
+      }
+    },
+    "Results are in!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ظهرت النتائج!"
           }
         }
       }
@@ -2073,12 +3283,72 @@
         }
       }
     },
+    "Search": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بحث"
+          }
+        }
+      }
+    },
+    "Search by their email or phone number.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ابحث ببريده الإلكتروني أو رقم جواله."
+          }
+        }
+      }
+    },
+    "Secure your account 🔒": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "احمِ حسابك 🔒"
+          }
+        }
+      }
+    },
     "See today's progress and check off goals right from your Home Screen.": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
             "value": "تابع تقدّم اليوم وسجّل إنجاز أهدافك مباشرة من الشاشة الرئيسية."
+          }
+        }
+      }
+    },
+    "Send Reset Link": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إرسال الرابط"
+          }
+        }
+      }
+    },
+    "Sent": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تم الإرسال"
+          }
+        }
+      }
+    },
+    "Sent Requests": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الطلبات المرسلة"
           }
         }
       }
@@ -2113,12 +3383,42 @@
         }
       }
     },
+    "Share Results": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مشاركة النتائج"
+          }
+        }
+      }
+    },
     "Share with Friends": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
             "value": "شارك مع أصدقائك"
+          }
+        }
+      }
+    },
+    "Show password": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إظهار كلمة المرور"
+          }
+        }
+      }
+    },
+    "Sign Up": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إنشاء حساب"
           }
         }
       }
@@ -2143,6 +3443,56 @@
         }
       }
     },
+    "Something went wrong": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حدث خطأ ما"
+          }
+        }
+      }
+    },
+    "Start": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "البداية"
+          }
+        }
+      }
+    },
+    "Start Challenge": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ابدأ التحدي"
+          }
+        }
+      }
+    },
+    "Start today": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ابدأ اليوم"
+          }
+        }
+      }
+    },
+    "Start tomorrow": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ابدأ غدًا"
+          }
+        }
+      }
+    },
     "Started": {
       "localizations": {
         "ar": {
@@ -2153,12 +3503,62 @@
         }
       }
     },
+    "Starting Soon": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تبدأ قريبًا"
+          }
+        }
+      }
+    },
+    "Starts %@": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يبدأ %@"
+          }
+        }
+      }
+    },
+    "Starts in %@": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يبدأ بعد %@"
+          }
+        }
+      }
+    },
+    "Step %lld of %lld": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الخطوة %1$lld من %2$lld"
+          }
+        }
+      }
+    },
     "Streaks": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
             "value": "السلاسل"
+          }
+        }
+      }
+    },
+    "Strong": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "قوية"
           }
         }
       }
@@ -2179,6 +3579,76 @@
           "stringUnit": {
             "state": "translated",
             "value": "مدة التحدي"
+          }
+        }
+      }
+    },
+    "Team Grade": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تقدير الفريق"
+          }
+        }
+      }
+    },
+    "Team grade %@ · %@": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تقدير الفريق %1$@ · %2$@"
+          }
+        }
+      }
+    },
+    "Tell us a little about yourself.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أخبرنا قليلًا عن نفسك."
+          }
+        }
+      }
+    },
+    "That email doesn't look right.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يبدو أن البريد الإلكتروني غير صحيح."
+          }
+        }
+      }
+    },
+    "That's you! Search for a friend's email or phone.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "هذا أنت! ابحث ببريد صديقك أو رقمه."
+          }
+        }
+      }
+    },
+    "The email or password is incorrect.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "البريد الإلكتروني أو كلمة المرور غير صحيحة."
+          }
+        }
+      }
+    },
+    "This permanently deletes your Ritm account, profile and friendships. This can't be undone.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سيُحذف حسابك في رتم وملفك وصداقاتك نهائيًا. لا يمكن التراجع عن ذلك."
           }
         }
       }
@@ -2209,6 +3679,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "حان وقت هدف جديد! 🚀"
+          }
+        }
+      }
+    },
+    "Tip: add friends in the Friends tab first.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تلميح: أضف أصدقاءك من تبويب الأصدقاء أولًا."
           }
         }
       }
@@ -2259,6 +3739,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "تبديل حالة الهدف"
+          }
+        }
+      }
+    },
+    "Too many attempts. Please wait a moment and try again.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "محاولات كثيرة. انتظر قليلًا ثم حاول مجددًا."
           }
         }
       }
@@ -2333,12 +3823,62 @@
         }
       }
     },
+    "Use at least 8 characters with a letter and a number.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "استخدم ٨ أحرف على الأقل تتضمن حرفًا ورقمًا."
+          }
+        }
+      }
+    },
+    "Use digits only, e.g. +966 5X XXX XXXX.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "استخدم الأرقام فقط، مثل ‎+966 5X XXX XXXX."
+          }
+        }
+      }
+    },
     "Version": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
             "value": "الإصدار"
+          }
+        }
+      }
+    },
+    "Very strong": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "قوية جدًا"
+          }
+        }
+      }
+    },
+    "View Results": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "عرض النتائج"
+          }
+        }
+      }
+    },
+    "Waiting for %@": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بانتظار %@"
           }
         }
       }
@@ -2363,12 +3903,52 @@
         }
       }
     },
+    "We sent a link to reset your password to %@.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أرسلنا رابط إعادة تعيين كلمة المرور إلى %@."
+          }
+        }
+      }
+    },
+    "Weak": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ضعيفة"
+          }
+        }
+      }
+    },
     "Week": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
             "value": "أسبوع"
+          }
+        }
+      }
+    },
+    "Welcome back! 👋": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أهلًا بعودتك! 👋"
+          }
+        }
+      }
+    },
+    "Welcome, %@!": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أهلًا، %@!"
           }
         }
       }
@@ -2389,6 +3969,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "تحتاج الأدوات إلى ميزة App Group. راجع ملف README لإعدادها مرة واحدة في Xcode."
+          }
+        }
+      }
+    },
+    "Winner": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الفائز"
           }
         }
       }
@@ -2433,12 +4023,62 @@
         }
       }
     },
+    "You": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أنت"
+          }
+        }
+      }
+    },
+    "You already sent a request to this person.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لقد أرسلت طلبًا لهذا الشخص مسبقًا."
+          }
+        }
+      }
+    },
+    "You need to be at least 13 to use Ritm.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يجب ألا يقل عمرك عن ١٣ سنة لاستخدام رتم."
+          }
+        }
+      }
+    },
+    "You won! 🎉": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لقد فزت! 🎉"
+          }
+        }
+      }
+    },
     "You'll get a gentle nudge every day at %@.": {
       "localizations": {
         "ar": {
           "stringUnit": {
             "state": "translated",
             "value": "ستصلك رسالة تذكير لطيفة كل يوم الساعة %@."
+          }
+        }
+      }
+    },
+    "You're already friends.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أنتما صديقان بالفعل."
           }
         }
       }
@@ -2473,6 +4113,16 @@
         }
       }
     },
+    "Your personal goals stay on this device.": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تبقى أهدافك الشخصية على هذا الجهاز."
+          }
+        }
+      }
+    },
     "days": {
       "localizations": {
         "ar": {
@@ -2499,6 +4149,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "أهداف منجزة اليوم"
+          }
+        }
+      }
+    },
+    "of %lld": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "من %lld"
+          }
+        }
+      }
+    },
+    "wants to be your friend": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يريد أن يكون صديقك"
           }
         }
       }

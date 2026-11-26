@@ -5,6 +5,12 @@ options:
   createIntermediateGroups: true
   developmentLanguage: en
 
+packages:
+  Firebase:
+    url: https://github.com/firebase/firebase-ios-sdk
+    minVersion: 11.0.0
+    maxVersion: 14.0.0
+
 settings:
   base:
     # Change this once to your own reverse-domain (e.g. com.yourname).
@@ -29,6 +35,10 @@ targets:
       - path: Shared
     dependencies:
       - target: RitmWidgets
+      - package: Firebase
+        product: FirebaseAuth
+      - package: Firebase
+        product: FirebaseFirestore
     info:
       path: Ritm/Info.plist
       properties:

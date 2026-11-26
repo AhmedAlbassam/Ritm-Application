@@ -7,3 +7,6 @@ Ritm/Info.plist
 Ritm/Ritm.entitlements
 RitmWidgets/Info.plist
 RitmWidgets/RitmWidgets.entitlements
+
+# Your Firebase project's config file (download it from the Firebase console)
+GoogleService-Info.plist

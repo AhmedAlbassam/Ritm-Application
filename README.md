@@ -14,6 +14,9 @@ Create goals across areas of life, set a target number of days, get a daily remi
 - **Achievements:** 19 badges in four tiers (Bronze, Silver, Gold, Legendary), levels and points, and per-goal milestones at 25 / 50 / 75 / 100%. Each one gets a full-screen celebration (confetti, light rays, a shining medal, haptics) and a **share card** (1080×1350 image) for Messages, WhatsApp, Instagram and other apps.
 - **Arabic + right-to-left:** the whole app, widgets and notifications are translated, with Arabic plural rules.
 - **Reminders:** one daily notification per goal, with a "Mark as Achieved ✅" button.
+- **Accounts:** a step-by-step sign-up (name, age, email, phone, password with a strength meter), log in, password reset, log out and delete account.
+- **Friends:** find people by exact email or phone, send and accept requests, and challenge a friend in one tap.
+- **Challenges:** 1 vs 1 or group challenges with live leaderboards, a head-to-head scoreboard, and a group letter grade. When a challenge ends, a results board shows the winner on an animated podium, with confetti and a shareable image.
 
 ## Open in Xcode
 
@@ -36,6 +39,22 @@ The app and its widgets share data through an **App Group**.
 3. Run the app (⌘R).
 
 If the App Group isn't available, the app still works; it just keeps its data privately, and the widgets show "Open Ritm to finish setting up widgets". **Settings ▸ About ▸ Widgets** shows whether they're connected.
+
+### Accounts, friends & challenges (Firebase, one-time setup)
+
+Online features use **Firebase** (free plan). Until it's connected, the login screen says so, and in Debug builds you can still use the **"Developer: log in as admin (demo data)"** button. It opens a demo account with sample friends, live challenges and a finished challenge's results board. That button only exists in builds run from Xcode, never in App Store builds.
+
+1. Go to [console.firebase.google.com](https://console.firebase.google.com) and choose **Add project** (name it "Ritm"; Google Analytics is optional).
+2. Choose **Add app ▸ iOS**. Enter your bundle ID: `BUNDLE_ID_PREFIX` + `.Ritm`, e.g. `com.yourname.Ritm`.
+3. Download **GoogleService-Info.plist** and put it in the `Ritm/` folder (next to `App/`). It's git-ignored on purpose.
+4. Go to **Build ▸ Authentication ▸ Get started ▸ Email/Password** and turn on **Enable**.
+5. Go to **Build ▸ Firestore Database ▸ Create database**, pick **production mode** and a nearby location. Then open the **Rules** tab, paste the contents of `firestore.rules` from this repo, and choose **Publish**.
+6. Run `xcodegen generate` and build. The first build downloads the Firebase package, which takes a few minutes.
+
+**How data is stored:**
+- Private details (email, phone, age) are readable only by their owner.
+- Friends are found by a SHA-256 hash of the exact email or phone, so nobody can browse other users' contact details.
+- Personal goals stay on the device in SwiftData. Only friends and challenges are online.
 
 ### Add the widgets (Simulator or iPhone)
 
@@ -60,9 +79,11 @@ Ritm/
 ├── App/                RitmApp, RootView (tabs + celebration layer)
 ├── Models/             Achievement & GoalMilestone definitions, GoalTemplate
 ├── ViewModels/         TodayViewModel, GoalFormModel, InsightsReport
-├── Views/              Today, Add/Edit, Detail, History, Archived, Insights, Achievements, Celebration, Settings
+├── Views/              Today, Add/Edit, Detail, History, Archived, Insights, Achievements, Celebration, Settings,
+│                       Auth/ (login & sign-up), Challenges/ (list, create, detail, results), Friends/
 ├── Components/         Cards, rings, badges, confetti, share card, chips…
-├── Managers/           NotificationManager, CelebrationCenter, ProgressAnalytics, DataStore, PreviewData
+├── Managers/           NotificationManager, CelebrationCenter, ProgressAnalytics, DataStore, SessionStore, PreviewData
+│   └── Backend/        SocialBackend protocol, FirebaseBackend, DemoBackend (developer admin login)
 └── Resources/          Assets (app icon, رتم wordmark)
 RitmWidgets/            Home Screen and Lock Screen widgets
 ```

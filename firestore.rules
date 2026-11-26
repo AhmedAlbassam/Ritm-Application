@@ -1,0 +1,42 @@
+rules_version = '2';
+
+// Security rules for Ritm. Paste into Firebase console ▸ Firestore Database ▸ Rules ▸ Publish.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() { return request.auth != null; }
+    function me() { return request.auth.uid; }
+
+    // Private profile: name, email, phone, age. Only the owner can read or write it.
+    match /users/{uid} {
+      allow read, write: if signedIn() && me() == uid;
+    }
+
+    // Public profile: display name + hashed email/phone, used to find friends.
+    match /publicProfiles/{uid} {
+      allow read: if signedIn();
+      allow write: if signedIn() && me() == uid;
+    }
+
+    match /friendRequests/{id} {
+      allow read: if signedIn() && (resource.data.fromID == me() || resource.data.toID == me());
+      allow create: if signedIn() && request.resource.data.fromID == me() && request.resource.data.status == 'pending';
+      allow update: if signedIn() && resource.data.toID == me();
+      allow delete: if signedIn() && (resource.data.fromID == me() || resource.data.toID == me());
+    }
+
+    match /friendships/{id} {
+      allow read, delete: if signedIn() && me() in resource.data.members;
+      allow create: if signedIn() && me() in request.resource.data.members
+                    && request.resource.data.members.size() == 2;
+    }
+
+    match /challenges/{id} {
+      allow read: if signedIn() && me() in resource.data.memberIds;
+      allow create: if signedIn() && request.resource.data.creatorID == me()
+                    && me() in request.resource.data.memberIds;
+      allow update: if signedIn() && me() in resource.data.memberIds;
+      allow delete: if signedIn() && resource.data.creatorID == me();
+    }
+  }
+}
