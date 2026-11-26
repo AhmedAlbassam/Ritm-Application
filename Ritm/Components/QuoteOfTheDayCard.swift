@@ -21,77 +21,59 @@ struct QuoteOfTheDayCard: View {
     private var colors: [Color] { Self.themes[DailyQuote.themeIndex(for: date) % Self.themes.count] }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 14) {
-            HStack(spacing: 6) {
-                Image(systemName: "sparkles")
-                    .symbolEffect(.pulse, options: .repeating)
-                Text("Quote of the Day")
-                    .textCase(.uppercase)
-                    .tracking(1)
-                Spacer()
-                ShareLink(item: "“\(quote.text)”\n— \(quote.source)\n\n#Ritm") {
-                    Image(systemName: "square.and.arrow.up")
-                        .font(.subheadline.weight(.semibold))
-                        .padding(8)
-                        .background(.white.opacity(0.2), in: Circle())
-                }
-                .accessibilityLabel(Text("Share quote"))
-            }
-            .font(.caption.weight(.heavy))
-            .foregroundStyle(.white.opacity(0.9))
-
-            Text(quote.text)
-                .font(.system(.title3, design: .serif).weight(.semibold))
+        HStack(alignment: .top, spacing: 12) {
+            Image(systemName: "quote.opening")
+                .font(.system(size: 15, weight: .black))
                 .foregroundStyle(.white)
-                .lineSpacing(4)
-                .lineLimit(isExpanded ? nil : 4)
-                .fixedSize(horizontal: false, vertical: true)
-                .multilineTextAlignment(.leading)
+                .frame(width: 32, height: 32)
+                .background(.white.opacity(0.2), in: Circle())
+                .flipsForRightToLeftLayoutDirection(true)
 
-            HStack(spacing: 8) {
-                Capsule()
-                    .fill(.white.opacity(0.7))
-                    .frame(width: 22, height: 2)
-                Text(quote.source)
-                    .font(.subheadline.weight(.medium))
+            VStack(alignment: .leading, spacing: 4) {
+                Text(quote.text)
+                    .font(.system(.subheadline, design: .serif).weight(.semibold))
+                    .foregroundStyle(.white)
+                    .lineLimit(isExpanded ? nil : 2)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .multilineTextAlignment(.leading)
+
+                Text("— \(quote.source)")
+                    .font(.caption.weight(.medium))
+                    .foregroundStyle(.white.opacity(0.85))
+                    .lineLimit(1)
+            }
+
+            Spacer(minLength: 0)
+
+            ShareLink(item: "“\(quote.text)”\n— \(quote.source)\n\n#Ritm") {
+                Image(systemName: "square.and.arrow.up")
+                    .font(.caption.weight(.bold))
                     .foregroundStyle(.white.opacity(0.9))
+                    .frame(width: 28, height: 28)
             }
+            .accessibilityLabel(Text("Share quote"))
         }
-        .padding(20)
+        .padding(.horizontal, 14)
+        .padding(.vertical, 12)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background {
-            ZStack(alignment: .topTrailing) {
-                LinearGradient(colors: colors, startPoint: .topLeading, endPoint: .bottomTrailing)
-
-                // Large decorative quotation mark.
-                Image(systemName: "quote.opening")
-                    .font(.system(size: 110, weight: .black))
-                    .foregroundStyle(.white.opacity(0.12))
-                    .offset(x: 12, y: -16)
-                    .flipsForRightToLeftLayoutDirection(true)
-
-                Circle()
-                    .fill(.white.opacity(0.10))
-                    .frame(width: 160, height: 160)
-                    .offset(x: 60, y: 90)
-                    .blur(radius: 2)
-            }
-            .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
-        }
-        .shadow(color: (colors.last ?? .indigo).opacity(0.35), radius: 14, y: 8)
-        .scaleEffect(appeared ? 1 : 0.96)
+        .background(
+            LinearGradient(colors: colors, startPoint: .topLeading, endPoint: .bottomTrailing),
+            in: RoundedRectangle(cornerRadius: 18, style: .continuous)
+        )
+        .shadow(color: (colors.last ?? .indigo).opacity(0.25), radius: 8, y: 4)
         .opacity(appeared ? 1 : 0)
+        .contentShape(Rectangle())
         .onTapGesture {
             withAnimation(.spring(response: 0.4, dampingFraction: 0.8)) { isExpanded.toggle() }
         }
         .onAppear {
-            withAnimation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.1)) { appeared = true }
+            withAnimation(.easeOut(duration: 0.4).delay(0.1)) { appeared = true }
         }
         .id(DayKey.string(from: date))
-        .transition(.opacity.combined(with: .scale(scale: 0.95)))
         .accessibilityElement(children: .combine)
         .accessibilityLabel(Text("Quote of the Day"))
         .accessibilityValue(Text("\(quote.text) — \(quote.source)"))
+        .accessibilityHint(Text("Tap to read the full quote"))
     }
 }
 

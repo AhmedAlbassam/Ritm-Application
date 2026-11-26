@@ -3593,6 +3593,16 @@
         }
       }
     },
+    "Tap to read the full quote": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اضغط لقراءة الاقتباس كاملًا"
+          }
+        }
+      }
+    },
     "Target Duration": {
       "localizations": {
         "ar": {
@@ -4199,6 +4209,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "· مكتمل 🏆"
+          }
+        }
+      }
+    },
+    "— %@": {
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "— %@"
           }
         }
       }
