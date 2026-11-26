@@ -22,7 +22,8 @@ settings:
     SWIFT_VERSION: "5.0"
     CODE_SIGN_STYLE: Automatic
     TARGETED_DEVICE_FAMILY: "1"
-    SWIFT_EMIT_LOC_STRINGS: YES
+    # Off so Xcode does not rewrite Localizable.xcstrings on every build (avoids git pull conflicts).
+    SWIFT_EMIT_LOC_STRINGS: NO
     LOCALIZATION_PREFERS_STRING_CATALOGS: YES
     ENABLE_PREVIEWS: YES
 
